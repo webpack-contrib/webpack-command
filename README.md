@@ -26,95 +26,10 @@ To begin, you'll need to install `webpack-woof`:
 $ npm install webpack-woof --save-dev
 ```
 
-<!-- isLoader ? use(this) : delete(isPlugin) -->
-Then add the loader to your `webpack` config. For example:
+## TODO
 
-<!-- isPlugin ? use(this) : delete(isLoader) -->
-Then add the plugin to your `webpack` config. For example:
-
-**file.ext**
-```js
-import file from 'file.ext';
-```
-
-<!-- isLoader ? use(this) : delete(isPlugin) -->
-**webpack.config.js**
-```js
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /.ext$/,
-        use: [
-          {
-            loader: `webpackwoof-loader`,
-            options: {...options}
-          }
-        ]
-      }
-    ]
-  }
-}
-```
-
-<!-- isPlugin ? use(this) : delete(isLoader) -->
-**webpack.config.js**
-```js
-module.exports = {
-  plugins: [
-    new `WebpackWoof`Plugin(options)
-  ]
-}
-```
-
-And run `webpack` via your preferred method.
-
-## Options
-
-### `[option]`
-
-Type: `[type|other-type]`
-Default: `[type|null]`
-
-[ option description ]
-
-<!-- isLoader ? use(this) : delete(isPlugin) -->
-```js
-// in your webpack.config.js
-{
-  loader: `webpackwoof-loader`,
-  options: {
-    [option]: ''
-  }
-}
-```
-
-<!-- isPlugin ? use(this) : delete(isLoader) -->
-```js
-// in your webpack.config.js
-new `WebpackWoof`Plugin({
-  [option]: ''
-})
-```
-
-## Examples
-
-[ example outline text ]
-
-**webpack.config.js**
-```js
-// Example setup here..
-```
-
-**file.ext**
-```js
-// Source code here...
-```
-
-**bundle.js**
-```js
-// Bundle code here...
-```
+- docs for `teach` command, `pre` and `post` install, `--forget`
+- docs for writing commands
 
 ## Contributing
 
