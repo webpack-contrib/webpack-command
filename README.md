@@ -31,6 +31,11 @@ $ npm install webpack-woof --save-dev
 - docs for `teach` command, `pre` and `post` install, `--forget`
 - docs for writing commands
 
+## Bennies
+
+- will validate all flag types first
+- will catch misspelled flags
+
 ## Contributing
 
 Please take a moment to read our contributing guidelines if you haven't yet done so.
