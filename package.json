@@ -8,7 +8,7 @@
   "homepage": "https://github.com/webpack-contrib/webpack-woof",
   "bugs": "https://github.com/webpack-contrib/webpack-woof/issues",
   "bin": {
-    "wepack": "lib/cli.js"
+    "webpack": "lib/cli.js"
   },
   "main": "index.js",
   "engines": {
