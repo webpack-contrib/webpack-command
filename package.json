@@ -51,16 +51,20 @@
     "import-local": "^1.0.0",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.5",
+    "log-symbols": "^2.2.0",
     "loud-rejection": "^1.6.0",
     "meant": "^1.0.1",
     "meow": "^4.0.0",
     "merge-options": "^1.0.0",
     "opn": "^5.3.0",
+    "plur": "^3.0.0",
+    "pretty-bytes": "^4.0.2",
     "strip-ansi": "^4.0.0",
     "text-table": "^0.2.0",
     "update-notifier": "^2.3.0",
     "v8-compile-cache": "^1.1.0",
-    "webpack-log": "^1.1.2"
+    "webpack-log": "^1.1.2",
+    "wordwrap": "^1.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",
