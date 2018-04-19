@@ -10,7 +10,7 @@
   "bin": {
     "webpack": "lib/cli.js"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">= 6.9.0 <7.0.0 || >= 8.9.0"
   },
@@ -44,14 +44,12 @@
     "webpack": "^4.4.0"
   },
   "dependencies": {
-    "@webpack-contrib/config-loader": "^0.1.0",
+    "@webpack-contrib/config-loader": "^0.1.1",
     "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
     "camelcase": "^5.0.0",
     "chalk": "^2.3.2",
-    "cosmiconfig": "^4.0.0",
     "debug": "^3.1.0",
     "decamelize": "^2.0.0",
-    "execa": "^0.10.0",
     "import-local": "^1.0.0",
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.5",
@@ -89,8 +87,6 @@
     "jest": "^22.4.3",
     "lint-staged": "^7.0.4",
     "memory-fs": "^0.4.1",
-    "mocha": "^5.0.0",
-    "mocha-chrome": "^1.0.3",
     "nsp": "^3.2.1",
     "nyc": "^11.4.1",
     "power-assert": "^1.4.4",

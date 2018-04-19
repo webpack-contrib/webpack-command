@@ -28,8 +28,11 @@ $ npm install webpack-woof --save-dev
 
 ## TODO
 
-- docs for `teach` command, `pre` and `post` install, `--forget`
-- docs for writing commands
+- docs: `teach` command, `pre` and `post` install, `--forget`
+- docs: writing commands
+- docs: `webpack file.js file2.js` input must be existing file/directory, `entry: { cli: [ ... ]}`
+- docs: `webpack --entry file --entry file2`
+- docs: `webpack --entry.name file --entry.name file2`
 
 ## Bennies
 
