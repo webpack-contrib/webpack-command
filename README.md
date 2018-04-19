@@ -33,6 +33,8 @@ $ npm install webpack-woof --save-dev
 - docs: `webpack file.js file2.js` input must be existing file/directory, `entry: { cli: [ ... ]}`
 - docs: `webpack --entry file --entry file2`
 - docs: `webpack --entry.name file --entry.name file2`
+- docs: `--resolve-alias.jquery jquery.plugin`
+- docs: `--resolve-loader-alias.catalog catalog/lib/loader`
 
 ## Bennies
 
