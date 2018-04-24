@@ -93,3 +93,35 @@ main.js  2.96 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
+
+exports[`Flags > --define > should apply 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/define/entry.js",
+  "mode": "development",
+  "name": "single-object",
+  "plugins": Array [
+    DefinePlugin {
+      "definitions": Object {
+        "DEFINE": "'valid'",
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+    DefinePlugin {
+      "definitions": Object {
+        "test": "invalid",
+      },
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --define > should build 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  3.04 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/flags/define/entry.js] 91 bytes {main} [built]"
+`;

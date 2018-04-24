@@ -1,3 +1,6 @@
+const { readFileSync: read } = require('fs');
+const { join } = require('path');
+
 const camelcaseKeys = require('camelcase-keys');
 const decamelizeKeys = require('decamelize-keys');
 const buildMinimistOptions = require('minimist-options');
@@ -37,6 +40,12 @@ module.exports = {
     return compiler(config).run();
   },
 
+  distContains(what) {
+    const content = read(join(__dirname, '../dist/main.js'), 'utf-8');
+
+    return content.indexOf(what) >= 0;
+  },
+
   prep,
 
   validate(options) {
@@ -49,7 +58,9 @@ module.exports = {
         const value = argv[key];
 
         if (!validate(flag, value)) {
-          throw new Error(`\`${key}\` does not match type(s) \`${flag.type}\``);
+          throw new Error(
+            `\`--${key}\` does not match type(s) \`${flag.type}\``
+          );
         }
       }
     }

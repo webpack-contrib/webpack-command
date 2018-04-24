@@ -14,4 +14,5 @@ describe('Flags', () => {
   require('./tests/flags/config-name');
   require('./tests/flags/context');
   require('./tests/flags/debug');
+  require('./tests/flags/define');
 });

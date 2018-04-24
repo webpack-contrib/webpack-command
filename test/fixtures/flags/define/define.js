@@ -1,14 +1,19 @@
 const { resolve } = require('path');
 
+const merge = require('merge-options');
 const { DefinePlugin } = require('webpack');
 
 const config = require('../../common/webpack.config');
 
-module.exports = {
-  arguments: ['--define.test', 'ok'],
+const plugins = [new DefinePlugin({ test: 'invalid' })];
 
-  config: Object.assign(config, {
-    entry: resolve(__dirname, '../../common/entry-a.js'),
-    plugins: [new DefinePlugin({ test: 'value' })],
+module.exports = {
+  arguments: ['--define.DEFINE', `'valid'`],
+
+  config: merge(config, {
+    entry: resolve(__dirname, './entry.js'),
+    plugins: config.plugins.concat(plugins),
   }),
+
+  group: 'advanced',
 };
