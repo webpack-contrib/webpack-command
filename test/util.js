@@ -31,7 +31,7 @@ module.exports = {
     return result;
   },
 
-  run(config) {
+  build(config) {
     return compiler(config).run();
   },
 

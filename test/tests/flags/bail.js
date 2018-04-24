@@ -1,7 +1,7 @@
 const merge = require('merge-options');
 const ModuleNotFoundError = require('webpack/lib/ModuleNotFoundError');
 
-const { apply, run, validate } = require('../../util');
+const { apply, build, validate } = require('../../util');
 
 const fixture = 'bail/bail';
 const group = 'advanced';
@@ -15,19 +15,17 @@ describe('--bail', () => {
   });
 
   it(`should apply`, () => {
-    const result = apply(opts);
+    config = apply(opts);
 
     // do this until https://github.com/tribou/jest-serializer-path/issues/23
     // is resolved
-    const test = merge({}, result);
+    const test = merge({}, config);
 
     expect(test).toMatchSnapshot();
-
-    config = merge({ reporter: 'test' }, result);
   });
 
   it(`should build, fail, and bail`, () =>
-    run(config).catch((error) => {
+    build(config).catch((error) => {
       expect(error).toEqual(expect.any(ModuleNotFoundError));
     }));
 });
