@@ -25,9 +25,10 @@
     "release:ci": "conventional-github-releaser -p angular",
     "release:validate": "commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)",
     "security": "nsp check",
-    "test": "jest",
+    "test": "jest --env=node",
+    "test-update": "jest --env=node -u",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
+    "test:coverage": "jest --env=node --collectCoverageFrom='src/**/*.js' --coverage",
     "ci:lint": "npm run lint && npm run security",
     "ci:test": "npm run test -- --runInBand",
     "ci:coverage": "npm run test:coverage -- --runInBand",
@@ -79,18 +80,23 @@
     "codecov": "^3.0.0",
     "conventional-github-releaser": "^2.0.2",
     "cross-env": "^5.1.4",
+    "decamelize-keys": "^1.1.0",
     "del": "^3.0.0",
     "del-cli": "^1.1.0",
     "eslint": "^4.5.0",
     "eslint-config-webpack": "^1.2.5",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "execa": "^0.10.0",
     "husky": "^0.14.3",
     "intelli-espower-loader": "^1.0.1",
     "istanbul": "^0.4.5",
     "jest": "^22.4.3",
+    "jest-serializer-path": "^0.1.13",
     "lint-staged": "^7.0.4",
     "memory-fs": "^0.4.1",
+    "minimist": "^1.2.0",
+    "minimist-options": "^3.0.2",
     "nsp": "^3.2.1",
     "nyc": "^11.4.1",
     "power-assert": "^1.4.4",
@@ -108,6 +114,11 @@
     "*.js": [
       "eslint --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-path"
     ]
   }
 }
