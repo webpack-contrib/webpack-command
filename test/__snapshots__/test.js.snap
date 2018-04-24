@@ -65,3 +65,31 @@ main.js  2.84 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./entry-a.js] 41 bytes {main} [built]"
 `;
+
+exports[`Flags > --debug > should apply 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-object",
+  "plugins": Array [
+    LoaderOptionsPlugin {
+      "options": Object {
+        "debug": true,
+        "test": Object {
+          "test": [Function],
+        },
+      },
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --debug > should build 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
