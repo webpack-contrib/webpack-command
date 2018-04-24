@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
-  arguments: ['--config-name', 'single-object'],
+  arguments: ['--config-name', 'multi-found'],
 
   config: [
     {
@@ -15,4 +15,6 @@ module.exports = {
       name: 'multi-found',
     },
   ],
+
+  group: 'config',
 };

@@ -10,4 +10,6 @@ module.exports = {
       name: 'single-object',
     },
   ],
+
+  group: 'config',
 };

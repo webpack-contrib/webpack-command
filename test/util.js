@@ -1,3 +1,4 @@
+const camelcaseKeys = require('camelcase-keys');
 const decamelizeKeys = require('decamelize-keys');
 const buildMinimistOptions = require('minimist-options');
 const minimist = require('minimist');
@@ -14,11 +15,12 @@ function prep(options) {
     Object.assign({ arguments: 'string' }, fixture.flags)
   );
 
-  const argv = minimist(args, minimistOpts);
+  let argv = minimist(args, minimistOpts);
+  argv = camelcaseKeys(argv, { exclude: ['--', /^\w$/] });
 
   delete argv._;
 
-  return { fixture, group, argv };
+  return { argv, fixture, group };
   /* eslint-enable global-require, import/no-dynamic-require */
 }
 

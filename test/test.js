@@ -11,4 +11,5 @@ require('./snapshot');
 describe('Flags', () => {
   require('./tests/flags/bail');
   require('./tests/flags/config');
+  require('./tests/flags/config-name');
 });

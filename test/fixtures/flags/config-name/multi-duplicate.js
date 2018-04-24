@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
-  arguments: ['--config-name', 'single-object'],
+  arguments: ['--config-name', 'multi-duplicate'],
 
   config: [
     {
@@ -20,4 +20,6 @@ module.exports = {
       name: 'multi-duplicate',
     },
   ],
+
+  group: 'config',
 };

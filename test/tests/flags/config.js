@@ -13,7 +13,7 @@ describe('--config', () => {
     const { argv } = prep({ fixture });
 
     return cli({ argv }).then((result) => {
-      expect(result).toMatchSnapshot(context);
+      expect(result).toMatchSnapshot();
     });
   });
 });

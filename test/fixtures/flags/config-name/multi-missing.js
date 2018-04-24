@@ -1,7 +1,8 @@
 const { resolve } = require('path');
+const WebpackWoofError = require('../../../../lib/WebpackWoofError');
 
 module.exports = {
-  arguments: ['--config-name', 'single-object'],
+  arguments: ['--config-name', 'multi-missing'],
 
   config: [
     {
@@ -15,4 +16,8 @@ module.exports = {
       name: 'bundle-b',
     },
   ],
+
+  group: 'config',
+
+  throws: WebpackWoofError,
 };

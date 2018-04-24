@@ -5,6 +5,7 @@ Object {
   "bail": true,
   "entry": "/Users/powella/code/webpack-woof/test/fixtures/flags/bail/entry.js",
   "mode": "development",
+  "name": "single-object",
   "plugins": Array [
     NamedModulesPlugin {
       "options": Object {},
@@ -20,4 +21,28 @@ exports[`Flags > --config > should build 1`] = `
 main.js  2.85 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./src/index.js] 43 bytes {main} [built]"
+`;
+
+exports[`Flags > --config-name > multi-duplicate should find config 1`] = `
+Object {
+  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-b.js",
+  "mode": "development",
+  "name": "multi-duplicate",
+}
+`;
+
+exports[`Flags > --config-name > multi-found should find config 1`] = `
+Object {
+  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-b.js",
+  "mode": "development",
+  "name": "multi-found",
+}
+`;
+
+exports[`Flags > --config-name > single-array should find config 1`] = `
+Object {
+  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-object",
+}
 `;
