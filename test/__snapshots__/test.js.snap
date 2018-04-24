@@ -46,3 +46,22 @@ Object {
   "name": "single-object",
 }
 `;
+
+exports[`Flags > --context > should apply 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>/test/fixtures/common",
+  "entry": "./entry-a.js",
+  "mode": "development",
+  "name": "single-object",
+  "plugins": Array [],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --context > should build 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.84 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./entry-a.js] 41 bytes {main} [built]"
+`;

@@ -1,13 +1,11 @@
-const ModuleNotFoundError = require('webpack/lib/ModuleNotFoundError');
-
 const { apply, build, validate } = require('../../util');
 
-const fixture = 'bail/bail';
+const fixture = 'context/context';
 const opts = { fixture };
 
 let config;
 
-describe('--bail', () => {
+describe('--context', () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });
@@ -18,8 +16,8 @@ describe('--bail', () => {
     expect(config).toMatchSnapshot();
   });
 
-  it(`should build, fail, and bail`, () =>
-    build(config).catch((error) => {
-      expect(error).toEqual(expect.any(ModuleNotFoundError));
+  it(`should build`, () =>
+    build(config).then((result) => {
+      expect(result).toMatchSnapshot();
     }));
 });

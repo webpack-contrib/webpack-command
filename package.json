@@ -91,7 +91,7 @@
     "expect": "^22.4.3",
     "husky": "^0.14.3",
     "istanbul": "^0.4.5",
-    "jest-serializer-path": "git+https://git@github.com/tribou/jest-serializer-path.git",
+    "jest-serializer-path": "^0.1.14",
     "jest-snapshot": "^22.4.3",
     "lint-staged": "^7.0.4",
     "memory-fs": "^0.4.1",

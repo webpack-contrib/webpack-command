@@ -10,4 +10,6 @@ module.exports = {
   config: Object.assign(config, {
     entry: './entry-a.js',
   }),
+
+  group: 'general',
 };

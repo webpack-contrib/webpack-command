@@ -12,4 +12,5 @@ describe('Flags', () => {
   require('./tests/flags/bail');
   require('./tests/flags/config');
   require('./tests/flags/config-name');
+  require('./tests/flags/context');
 });
