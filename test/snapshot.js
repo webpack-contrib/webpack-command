@@ -1,4 +1,9 @@
-const { SnapshotState, toMatchSnapshot } = require('jest-snapshot');
+const {
+  addSerializer,
+  SnapshotState,
+  toMatchSnapshot,
+} = require('jest-snapshot');
+const serializer = require('jest-serializer-path');
 const minimist = require('minimist');
 
 const argv = minimist(process.argv.slice(2));
@@ -43,5 +48,7 @@ function match(received) {
 
   return result;
 }
+
+addSerializer(serializer);
 
 expect.extend({ toMatchSnapshot: match });

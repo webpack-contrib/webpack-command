@@ -3,7 +3,7 @@
 exports[`Flags > --bail > should apply 1`] = `
 Object {
   "bail": true,
-  "entry": "/Users/powella/code/webpack-woof/test/fixtures/flags/bail/entry.js",
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/bail/entry.js",
   "mode": "development",
   "name": "single-object",
   "plugins": Array [
@@ -11,7 +11,7 @@ Object {
       "options": Object {},
     },
   ],
-  "reporter": "/Users/powella/code/webpack-woof/test/fixtures/common/test-reporter.js",
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
 }
 `;
 
@@ -25,7 +25,7 @@ Entrypoint main = main.js
 
 exports[`Flags > --config-name > multi-duplicate should find config 1`] = `
 Object {
-  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-b.js",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
   "mode": "development",
   "name": "multi-duplicate",
 }
@@ -33,7 +33,7 @@ Object {
 
 exports[`Flags > --config-name > multi-found should find config 1`] = `
 Object {
-  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-b.js",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
   "mode": "development",
   "name": "multi-found",
 }
@@ -41,7 +41,7 @@ Object {
 
 exports[`Flags > --config-name > single-array should find config 1`] = `
 Object {
-  "entry": "/Users/powella/code/webpack-woof/test/fixtures/common/entry-a.js",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "name": "single-object",
 }
