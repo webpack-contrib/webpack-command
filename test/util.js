@@ -2,6 +2,7 @@ const { readFileSync: read } = require('fs');
 const { join } = require('path');
 
 const camelcaseKeys = require('camelcase-keys');
+const { crc32 } = require('crc');
 const decamelizeKeys = require('decamelize-keys');
 const buildMinimistOptions = require('minimist-options');
 const minimist = require('minimist');
@@ -38,6 +39,13 @@ module.exports = {
 
   build(config) {
     return compiler(config).run();
+  },
+
+  crcDist(filePath) {
+    const readPath = filePath || join(__dirname, '../dist/main.js');
+    const content = read(readPath, 'utf-8');
+
+    return crc32(content).toString(16);
   },
 
   distContains(what) {

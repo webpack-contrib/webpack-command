@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Flags > --bail > should apply 1`] = `
+exports[`Flags > --bail > should apply #0 1`] = `
 Object {
   "bail": true,
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/bail/entry.js",
   "mode": "development",
-  "name": "single-object",
   "plugins": Array [
     NamedModulesPlugin {
       "options": Object {},
@@ -15,7 +14,7 @@ Object {
 }
 `;
 
-exports[`Flags > --config > should build 1`] = `
+exports[`Flags > --config > should build #0 1`] = `
 "Version: webpack 4.3.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.85 KiB    main  [emitted]  main
@@ -23,42 +22,21 @@ Entrypoint main = main.js
 [./src/index.js] 43 bytes {main} [built]"
 `;
 
-exports[`Flags > --config-name > multi-duplicate should find config 1`] = `
-Object {
-  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
-  "mode": "development",
-  "name": "multi-duplicate",
-}
-`;
-
-exports[`Flags > --config-name > multi-found should find config 1`] = `
-Object {
-  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
-  "mode": "development",
-  "name": "multi-found",
-}
-`;
-
-exports[`Flags > --config-name > single-array should find config 1`] = `
-Object {
-  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
-  "mode": "development",
-  "name": "single-object",
-}
-`;
-
-exports[`Flags > --context > should apply 1`] = `
+exports[`Flags > --context > should apply #0 1`] = `
 Object {
   "context": "<PROJECT_ROOT>/test/fixtures/common",
   "entry": "./entry-a.js",
   "mode": "development",
-  "name": "single-object",
-  "plugins": Array [],
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
   "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
 }
 `;
 
-exports[`Flags > --context > should build 1`] = `
+exports[`Flags > --context > should build #0 1`] = `
 "Version: webpack 4.3.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.84 KiB    main  [emitted]  main
@@ -66,12 +44,11 @@ Entrypoint main = main.js
 [./entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --debug > should apply 1`] = `
+exports[`Flags > --debug > should apply #0 1`] = `
 Object {
   "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
-  "name": "single-object",
   "plugins": Array [
     LoaderOptionsPlugin {
       "options": Object {
@@ -81,12 +58,15 @@ Object {
         },
       },
     },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
   ],
   "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
 }
 `;
 
-exports[`Flags > --debug > should build 1`] = `
+exports[`Flags > --debug > should build #0 1`] = `
 "Version: webpack 4.3.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.96 KiB    main  [emitted]  main
@@ -94,11 +74,10 @@ Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --define > should apply 1`] = `
+exports[`Flags > --define > should apply #0 1`] = `
 Object {
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/define/entry.js",
   "mode": "development",
-  "name": "single-object",
   "plugins": Array [
     DefinePlugin {
       "definitions": Object {
@@ -118,10 +97,38 @@ Object {
 }
 `;
 
-exports[`Flags > --define > should build 1`] = `
+exports[`Flags > --define > should build #0 1`] = `
 "Version: webpack 4.3.0
   Asset      Size  Chunks             Chunk Names
 main.js  3.04 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/flags/define/entry.js] 91 bytes {main} [built]"
 `;
+
+exports[`Flags > --devtool > should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "devtool": "cheap-source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --devtool > should build #0 1`] = `
+"Version: webpack 4.3.0
+      Asset      Size  Chunks             Chunk Names
+    main.js  2.92 KiB    main  [emitted]  main
+main.js.map  2.64 KiB    main  [emitted]  main
+Entrypoint main = main.js main.js.map
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --devtool > should build #1 1`] = `"f349b18e"`;
+
+exports[`Flags > --devtool > should build #2 1`] = `"195aef37"`;

@@ -79,6 +79,7 @@
     "camelcase-keys": "^4.2.0",
     "codecov": "^3.0.0",
     "conventional-github-releaser": "^2.0.2",
+    "crc": "^3.5.0",
     "cross-env": "^5.1.4",
     "decamelize-keys": "^1.1.0",
     "del": "^3.0.0",

@@ -9,6 +9,7 @@ const minimist = require('minimist');
 const argv = minimist(process.argv.slice(2));
 
 let current = null;
+const cache = {};
 
 global.beforeEach(function beforeEach() {
   current = this.currentTest;
@@ -27,7 +28,21 @@ function nameTest(test) {
     next = next.parent;
   }
 
-  return title.reverse().join(' > ');
+  let result = title.reverse().join(' > ');
+  let index = 0;
+
+  // can't yet figure out how jest-snapshot figures out how many snapshots are
+  // in a single test/it() group, so we'll mimic it for the time being.
+  if (typeof cache[result] !== 'undefined') {
+    cache[result] += 1;
+    index = cache[result];
+  } else {
+    cache[result] = 0;
+  }
+
+  result = `${result} #${index}`;
+
+  return result;
 }
 
 function match(received) {
@@ -41,6 +56,8 @@ function match(received) {
     snapshotState,
     currentTestName: nameTest(current),
   });
+
+  // console.log(snapshotState);
 
   const result = matcher(received);
 
