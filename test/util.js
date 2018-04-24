@@ -8,8 +8,8 @@ const { validate } = require('../lib/flags/util');
 function prep(options) {
   /* eslint-disable global-require, import/no-dynamic-require */
   const fixture = require(`./fixtures/flags/${options.fixture}`);
-  const group = require(`../lib/flags/${options.group}`);
-  const args = process.argv.slice(2).concat(fixture.arguments);
+  const group = require(`../lib/flags/${fixture.group}`);
+  const args = fixture.arguments;
   const minimistOpts = buildMinimistOptions(
     Object.assign({ arguments: 'string' }, fixture.flags)
   );
@@ -34,6 +34,8 @@ module.exports = {
   build(config) {
     return compiler(config).run();
   },
+
+  prep,
 
   validate(options) {
     const { argv, group } = prep(options);

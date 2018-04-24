@@ -1,7 +1,17 @@
 const { resolve } = require('path');
 
-const configPath = resolve(__dirname, '../../common/webpack.config');
+const configPath = resolve(__dirname, './argv.config.js');
+const reporterPath = resolve(__dirname, '../../common/test-reporter.js');
 
 module.exports = {
-  arguments: ['--config', configPath, '--entry', '../../common/entry-a.js'],
+  arguments: [
+    '--config',
+    configPath,
+    '--context',
+    __dirname,
+    '--reporter',
+    reporterPath,
+  ],
+
+  group: 'config',
 };

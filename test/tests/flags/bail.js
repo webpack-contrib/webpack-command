@@ -4,8 +4,7 @@ const ModuleNotFoundError = require('webpack/lib/ModuleNotFoundError');
 const { apply, build, validate } = require('../../util');
 
 const fixture = 'bail/bail';
-const group = 'advanced';
-const opts = { fixture, group };
+const opts = { fixture };
 
 let config;
 
@@ -17,7 +16,7 @@ describe('--bail', () => {
   it(`should apply`, () => {
     config = apply(opts);
 
-    // do this until https://github.com/tribou/jest-serializer-path/issues/23
+    // TODO: do this until https://github.com/tribou/jest-serializer-path/issues/23
     // is resolved
     const test = merge({}, config);
 

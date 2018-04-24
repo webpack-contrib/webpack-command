@@ -1,15 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Flags --bail should apply 1`] = `
+exports[`Flags > --bail > should apply 1`] = `
 Object {
   "bail": true,
-  "entry": "<PROJECT_ROOT>/test/fixtures/flags/bail/entry.js",
+  "entry": "/Users/powella/code/webpack-woof/test/fixtures/flags/bail/entry.js",
   "mode": "development",
   "plugins": Array [
     NamedModulesPlugin {
       "options": Object {},
     },
   ],
-  "reporter": "basic",
+  "reporter": "/Users/powella/code/webpack-woof/test/fixtures/common/test-reporter.js",
 }
+`;
+
+exports[`Flags > --config > should build 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.85 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./src/index.js] 43 bytes {main} [built]"
 `;
