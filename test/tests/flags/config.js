@@ -12,7 +12,7 @@ describe('--config', () => {
   it(`should build`, () => {
     const { argv } = prep({ fixture });
 
-    return cli({ argv }).then((result) => {
+    return cli({ argv, entries: [], flags: argv }).then((result) => {
       expect(result).toMatchSnapshot();
     });
   });

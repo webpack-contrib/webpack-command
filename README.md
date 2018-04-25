@@ -35,6 +35,7 @@ $ npm install webpack-woof --save-dev
 - docs: `webpack --entry.name file --entry.name file2`
 - docs: `--resolve-alias.jquery jquery.plugin`
 - docs: `--resolve-loader-alias.catalog catalog/lib/loader`
+- docs: --entry overridden by default : https://github.com/webpack/webpack-cli/pull/358
 
 ## Bennies
 
