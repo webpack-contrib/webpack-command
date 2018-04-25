@@ -18,7 +18,7 @@ describe('--module-bind', () => {
 
   it(`should bind and build`, () =>
     build(config).then((result) => {
-      expect(distContains('loader: module.exports'));
+      expect(distContains('loader: module.exports')).toBe(true);
       expect(result).toMatchSnapshot();
       expect(crcDist()).toMatchSnapshot();
     }));
@@ -42,7 +42,7 @@ describe('--module-bind-pre', () => {
 
   it(`should bind and build`, () =>
     build(config).then((result) => {
-      expect(distContains(`pre = true`));
+      expect(distContains(`pre = true`)).toBe(true);
       expect(result).toMatchSnapshot();
       expect(crcDist()).toMatchSnapshot();
     }));
@@ -66,7 +66,7 @@ describe('--module-bind-post', () => {
 
   it(`should bind and build`, () =>
     build(config).then((result) => {
-      expect(distContains(`post = true`));
+      expect(distContains(`post = true`)).toBe(true);
       expect(result).toMatchSnapshot();
       expect(crcDist()).toMatchSnapshot();
     }));
@@ -90,9 +90,9 @@ describe('--module-bind-all', () => {
 
   it(`should bind and build`, () =>
     build(config).then((result) => {
-      expect(distContains('loader: module.exports'));
-      expect(distContains(`pre = true`));
-      expect(distContains(`post = true`));
+      expect(distContains('loader: module.exports')).toBe(true);
+      expect(distContains(`pre = true`)).toBe(true);
+      expect(distContains(`post = true`)).toBe(true);
       expect(result).toMatchSnapshot();
       expect(crcDist()).toMatchSnapshot();
     }));

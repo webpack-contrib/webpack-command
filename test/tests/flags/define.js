@@ -18,7 +18,7 @@ describe('--define', () => {
 
   it(`should build`, () =>
     build(config).then((result) => {
-      expect(distContains(`result: 'valid'`));
+      expect(distContains(`result: 'valid'`)).toBe(true);
       expect(result).toMatchSnapshot();
     }));
 });

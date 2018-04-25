@@ -607,16 +607,7 @@ Object {
 }
 `;
 
-exports[`Flags > --profile > should build #0 1`] = `
-"Version: webpack 4.3.0
-  Asset      Size  Chunks             Chunk Names
-main.js  2.96 KiB    main  [emitted]  main
-Entrypoint main = main.js
-[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
-       factory:4ms building:1ms = 5ms"
-`;
-
-exports[`Flags > --profile > should build #1 1`] = `"bf58edd8"`;
+exports[`Flags > --profile > should build #0 1`] = `"bf58edd8"`;
 
 exports[`Flags > --records-* > input-output should apply #0 1`] = `
 Object {
@@ -633,7 +624,15 @@ Object {
 }
 `;
 
-exports[`Flags > --records-* > input-output should build #0 1`] = `"bf58edd8"`;
+exports[`Flags > --records-* > input-output should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --records-* > input-output should build #1 1`] = `"bf58edd8"`;
 
 exports[`Flags > --records-* > path should apply #0 1`] = `
 Object {
@@ -649,7 +648,15 @@ Object {
 }
 `;
 
-exports[`Flags > --records-* > path should build #0 1`] = `"bf58edd8"`;
+exports[`Flags > --records-* > path should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --records-* > path should build #1 1`] = `"bf58edd8"`;
 
 exports[`Flags > --reporter > basic reporter should apply #0 1`] = `
 Object {
@@ -679,3 +686,32 @@ Entrypoint main = main.js
 `;
 
 exports[`Flags > --reporter > basic reporter should build #1 1`] = `"bf58edd8"`;
+
+exports[`Flags > --target > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+  "target": "node",
+}
+`;
+
+exports[`Flags > --target > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  3.17 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --target > should build #1 1`] = `"9c6bcbff"`;

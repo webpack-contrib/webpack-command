@@ -8,4 +8,6 @@ module.exports = {
   config: Object.assign(config, {
     entry: resolve(__dirname, '../../common/entry-a.js'),
   }),
+
+  group: 'advanced',
 };

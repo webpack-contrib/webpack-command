@@ -36,4 +36,6 @@ describe('Flags', () => {
   require('./tests/flags/profile');
   require('./tests/flags/records');
   require('./tests/flags/reporter');
+
+  require('./tests/flags/target');
 });

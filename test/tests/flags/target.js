@@ -1,11 +1,11 @@
 const { apply, build, crcDist, validate } = require('../../util');
 
-const fixture = 'profile/profile';
+const fixture = 'target/target';
 const opts = { fixture };
 
 let config;
 
-describe('--profile', () => {
+describe('--target', () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });
@@ -18,7 +18,7 @@ describe('--profile', () => {
 
   it(`should build`, () =>
     build(config).then((result) => {
-      expect(/factory:\d+ms building:\d+ms = \d+ms/.test(result)).toBe(true);
+      expect(result).toMatchSnapshot();
       expect(crcDist()).toMatchSnapshot();
     }));
 });

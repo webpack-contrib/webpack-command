@@ -1,4 +1,4 @@
-const { apply, build, crcDist, distContains, validate } = require('../../util');
+const { apply, build, crcDist, validate } = require('../../util');
 
 describe('--records-*', () => {
   for (const name of ['input-output', 'path']) {
@@ -18,8 +18,8 @@ describe('--records-*', () => {
     });
 
     it(`${name} should build`, () =>
-      build(config).then(() => {
-        expect(distContains(/factory:\dms building:\dms = \dms/));
+      build(config).then((result) => {
+        expect(result).toMatchSnapshot();
         expect(crcDist()).toMatchSnapshot();
       }));
   }
