@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-require('./missing');
+require('./dependency');
 
 module.exports = {
   name: 'entry-bail',
