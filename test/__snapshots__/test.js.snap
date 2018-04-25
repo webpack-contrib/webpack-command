@@ -613,7 +613,7 @@ exports[`Flags > --profile > should build #0 1`] = `
 main.js  2.96 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
-       factory:3ms building:1ms = 4ms"
+       factory:4ms building:1ms = 5ms"
 `;
 
 exports[`Flags > --profile > should build #1 1`] = `"bf58edd8"`;
@@ -650,3 +650,32 @@ Object {
 `;
 
 exports[`Flags > --records-* > path should build #0 1`] = `"bf58edd8"`;
+
+exports[`Flags > --reporter > basic reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "basic",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+}
+`;
+
+exports[`Flags > --reporter > basic reporter should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --reporter > basic reporter should build #1 1`] = `"bf58edd8"`;

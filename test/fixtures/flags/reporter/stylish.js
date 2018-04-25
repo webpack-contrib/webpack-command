@@ -10,4 +10,9 @@ module.exports = {
   }),
 
   inspect: 'stdout',
+
+  group: 'general',
 };
+
+// the test reporter is added by default in common fixtures
+delete module.exports.config.reporter;
