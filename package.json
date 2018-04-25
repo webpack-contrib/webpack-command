@@ -118,9 +118,7 @@
       "git add"
     ]
   },
-  "jest": {
-    "snapshotSerializers": [
-      "jest-serializer-path"
-    ]
+  "nyc": {
+    "include": ["lib/**/*.js"]
   }
 }

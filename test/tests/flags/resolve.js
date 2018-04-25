@@ -1,9 +1,12 @@
 const { apply, build, crcDist, validate } = require('../../util');
 
-// TODO: test stylish reporter
-describe('--reporter', () => {
-  for (const name of ['basic']) {
-    const fixture = `reporter/${name}`;
+describe('--resolve-*', () => {
+  for (const name of [
+    'resolve-alias',
+    'resolve-extensions',
+    'resolve-loader-alias',
+  ]) {
+    const fixture = `resolve/${name}`;
     const opts = { fixture };
 
     let config;
