@@ -32,4 +32,5 @@ describe('Flags', () => {
   require('./tests/flags/plugin');
   require('./tests/flags/prefetch');
   require('./tests/flags/profile');
+  require('./tests/flags/records');
 });

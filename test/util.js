@@ -51,6 +51,10 @@ module.exports = {
   distContains(what) {
     const content = read(join(__dirname, '../dist/main.js'), 'utf-8');
 
+    if (what instanceof RegExp) {
+      return what.test(content);
+    }
+
     return content.indexOf(what) >= 0;
   },
 

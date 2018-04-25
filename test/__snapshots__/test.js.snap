@@ -613,7 +613,40 @@ exports[`Flags > --profile > should build #0 1`] = `
 main.js  2.96 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
-       factory:3ms building:0ms = 3ms"
+       factory:3ms building:1ms = 4ms"
 `;
 
 exports[`Flags > --profile > should build #1 1`] = `"bf58edd8"`;
+
+exports[`Flags > --records-* > input-output should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "recordsInputPath": "<PROJECT_ROOT>/dist/records-input.json",
+  "recordsOutputPath": "<PROJECT_ROOT>/dist/records-output.json",
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --records-* > input-output should build #0 1`] = `"bf58edd8"`;
+
+exports[`Flags > --records-* > path should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "recordsPath": "<PROJECT_ROOT>/dist/records.json",
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --records-* > path should build #0 1`] = `"bf58edd8"`;
