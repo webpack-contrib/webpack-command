@@ -37,5 +37,6 @@ describe('Flags', () => {
   require('./tests/flags/records');
   require('./tests/flags/reporter');
 
+  require('./tests/flags/run-mode');
   require('./tests/flags/target');
 });
