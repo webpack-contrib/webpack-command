@@ -10,4 +10,6 @@ module.exports = {
   }),
 
   inspect: 'stdout',
+
+  group: 'advanced',
 };

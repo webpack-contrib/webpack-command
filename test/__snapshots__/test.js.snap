@@ -592,3 +592,28 @@ Entrypoint main = main.js
 `;
 
 exports[`Flags > --prefetch > should build #1 1`] = `"54ba4ab9"`;
+
+exports[`Flags > --profile > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "profile": true,
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --profile > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
+       factory:3ms building:0ms = 3ms"
+`;
+
+exports[`Flags > --profile > should build #1 1`] = `"bf58edd8"`;
