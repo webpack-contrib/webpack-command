@@ -3,7 +3,7 @@ const { join } = require('path');
 
 const camelcaseKeys = require('camelcase-keys');
 const { crc32 } = require('crc');
-const decamelizeKeys = require('decamelize-keys');
+const decamel = require('decamelize');
 const buildMinimistOptions = require('minimist-options');
 const minimist = require('minimist');
 
@@ -63,8 +63,9 @@ module.exports = {
   validate(options) {
     const { argv, group } = prep(options);
 
-    for (const key of Object.keys(decamelizeKeys(argv))) {
-      const flag = group.flags[key];
+    for (const key of Object.keys(argv)) {
+      const arg = decamel(key, '-');
+      const flag = group.flags[arg];
 
       if (flag) {
         const value = argv[key];

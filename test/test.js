@@ -32,16 +32,14 @@ describe('Flags', () => {
   require('./tests/flags/mode');
   require('./tests/flags/module-bind');
   require('./tests/flags/optimize');
-
   require('./tests/flags/output');
-
   require('./tests/flags/plugin');
   require('./tests/flags/prefetch');
   require('./tests/flags/profile');
+  require('./tests/flags/provide');
   require('./tests/flags/records');
   require('./tests/flags/reporter');
   require('./tests/flags/resolve');
-
   require('./tests/flags/run-mode');
   require('./tests/flags/target');
 });
