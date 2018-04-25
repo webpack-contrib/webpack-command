@@ -1,1 +1,1 @@
-module.exports = (source) => `post-loader: ${source}`;
+module.exports = (source) => `${source}\nconst post = true;`;

@@ -1,1 +1,1 @@
-module.exports = (source) => `pre-loader: ${source}`;
+module.exports = (source) => `${source}\nconst pre = true;`;
