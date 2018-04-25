@@ -26,4 +26,5 @@ describe('Flags', () => {
   require('./tests/flags/define');
   require('./tests/flags/devtool');
   require('./tests/flags/entry');
+  require('./tests/flags/mode');
 });
