@@ -12,4 +12,6 @@ module.exports = {
       resolve(__dirname, '../../common/entry-c.js'),
     ],
   }),
+
+  group: 'optimization',
 };

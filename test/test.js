@@ -28,4 +28,5 @@ describe('Flags', () => {
   require('./tests/flags/entry');
   require('./tests/flags/mode');
   require('./tests/flags/module-bind');
+  require('./tests/flags/optimize');
 });
