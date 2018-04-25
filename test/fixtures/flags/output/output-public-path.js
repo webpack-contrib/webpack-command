@@ -6,6 +6,8 @@ module.exports = {
   arguments: ['--output-public-path', '/output-path/'],
 
   config: Object.assign(config, {
-    entry: resolve(__dirname, '../../common/entry-a.js'),
+    entry: resolve(__dirname, './output-entry.js'),
   }),
+
+  group: 'output',
 };

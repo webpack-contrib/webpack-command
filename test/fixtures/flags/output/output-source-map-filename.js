@@ -7,6 +7,8 @@ module.exports = {
 
   config: Object.assign(config, {
     devtool: 'source-map',
-    entry: resolve(__dirname, '../../common/entry-a.js'),
+    entry: resolve(__dirname, './output-entry.js'),
   }),
+
+  group: 'output',
 };
