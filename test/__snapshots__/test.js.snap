@@ -525,3 +525,43 @@ Entrypoint main = main.js
 `;
 
 exports[`Flags > --optimize-* > minimize should build #1 1`] = `"bf58edd8"`;
+
+exports[`Flags > --plugin > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    UglifyJsPlugin {
+      "options": Object {
+        "cache": false,
+        "exclude": undefined,
+        "extractComments": false,
+        "include": undefined,
+        "parallel": false,
+        "sourceMap": false,
+        "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+        "uglifyOptions": Object {
+          "output": Object {
+            "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
+          },
+        },
+        "warningsFilter": [Function],
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --plugin > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset       Size  Chunks             Chunk Names
+main.js  912 bytes    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --plugin > should build #1 1`] = `"83723963"`;
