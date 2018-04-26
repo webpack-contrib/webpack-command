@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --cache > should apply #0 1`] = `
+Object {
+  "cache": true,
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --cache > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;

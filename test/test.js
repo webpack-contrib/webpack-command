@@ -17,6 +17,7 @@ require('./snapshot');
 
 describe('Flags', () => {
   require('./tests/flags/bail');
+  require('./tests/flags/cache');
   require('./tests/flags/config');
 
   // TODO: something is up with the name thing, it's naming every config before and
