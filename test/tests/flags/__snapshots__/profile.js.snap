@@ -2,7 +2,6 @@
 
 exports[`Flags > --profile > should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -15,4 +14,4 @@ Object {
 }
 `;
 
-exports[`Flags > --profile > should build #0 1`] = `"f349b18e"`;
+exports[`Flags > --profile > should build #0 1`] = `"bf58edd8"`;

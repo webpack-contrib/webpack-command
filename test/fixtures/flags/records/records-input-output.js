@@ -10,7 +10,7 @@ module.exports = {
     './dist/records-output.json',
   ],
 
-  config: Object.assign(config, {
+  config: Object.assign({}, config, {
     entry: resolve(__dirname, '../../common/entry-a.js'),
   }),
 

@@ -2,7 +2,6 @@
 
 exports[`Flags > --plugin > should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -34,9 +33,9 @@ Object {
 exports[`Flags > --plugin > should build #0 1`] = `
 "Version: webpack 4.3.0
   Asset       Size  Chunks             Chunk Names
-main.js  812 bytes    main  [emitted]  main
+main.js  912 bytes    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --plugin > should build #1 1`] = `"3d4f7eb4"`;
+exports[`Flags > --plugin > should build #1 1`] = `"83723963"`;

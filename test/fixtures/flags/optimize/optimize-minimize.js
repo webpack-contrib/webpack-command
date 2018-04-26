@@ -5,7 +5,7 @@ const config = require('../../common/webpack.config');
 module.exports = {
   arguments: ['--optimize-minimize'],
 
-  config: Object.assign(config, {
+  config: Object.assign({}, config, {
     entry: resolve(__dirname, '../../common/entry-a.js'),
   }),
 

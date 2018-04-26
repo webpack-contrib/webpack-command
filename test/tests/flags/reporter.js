@@ -1,8 +1,10 @@
+const strip = require('strip-ansi');
+
 const { apply, build, crcDist, test, validate } = require('../../util');
 
 // TODO: test stylish reporter
 test('--reporter', module, () => {
-  for (const name of ['basic']) {
+  for (const name of ['basic', 'stylish']) {
     const fixture = `reporter/${name}`;
     const opts = { fixture };
 
@@ -20,7 +22,9 @@ test('--reporter', module, () => {
 
     it(`${name} reporter should build`, () =>
       build(config).then((result) => {
-        expect(result).toMatchSnapshot();
+        expect(
+          strip(result).replace(/Δt \d+ms/, '<duration>')
+        ).toMatchSnapshot();
         expect(crcDist()).toMatchSnapshot();
       }));
   }

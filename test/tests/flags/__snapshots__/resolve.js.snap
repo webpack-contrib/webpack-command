@@ -2,7 +2,6 @@
 
 exports[`Flags > --resolve-* > resolve-alias reporter should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/resolve/entry.js",
   "mode": "development",
   "plugins": Array [
@@ -16,29 +15,22 @@ Object {
       "aliased": "<PROJECT_ROOT>/test/fixtures/flags/resolve/aliased",
     },
   },
-  "stats": Object {
-    "builtAt": false,
-    "hash": false,
-    "timings": false,
-  },
 }
 `;
 
 exports[`Flags > --resolve-* > resolve-alias reporter should build #0 1`] = `
 "Version: webpack 4.3.0
-      Asset      Size  Chunks             Chunk Names
-    main.js  3.51 KiB    main  [emitted]  main
-main.js.map  2.89 KiB    main  [emitted]  main
-Entrypoint main = main.js main.js.map
+  Asset      Size  Chunks             Chunk Names
+main.js  3.64 KiB    main  [emitted]  main
+Entrypoint main = main.js
 [./test/fixtures/flags/resolve/aliased/dependency.js] 39 bytes {main} [built]
 [./test/fixtures/flags/resolve/entry.js] 150 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-alias reporter should build #1 1`] = `"567fc25"`;
+exports[`Flags > --resolve-* > resolve-alias reporter should build #1 1`] = `"2daf8057"`;
 
 exports[`Flags > --resolve-* > resolve-extensions reporter should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/resolve/entry-extensions.js",
   "mode": "development",
   "plugins": Array [
@@ -52,29 +44,22 @@ Object {
       ".custom",
     ],
   },
-  "stats": Object {
-    "builtAt": false,
-    "hash": false,
-    "timings": false,
-  },
 }
 `;
 
 exports[`Flags > --resolve-* > resolve-extensions reporter should build #0 1`] = `
 "Version: webpack 4.3.0
-      Asset      Size  Chunks             Chunk Names
-    main.js  3.53 KiB    main  [emitted]  main
-main.js.map  2.91 KiB    main  [emitted]  main
-Entrypoint main = main.js main.js.map
+  Asset      Size  Chunks             Chunk Names
+main.js  3.68 KiB    main  [emitted]  main
+Entrypoint main = main.js
 [./test/fixtures/flags/resolve/dependency.custom] 38 bytes {main} [built]
 [./test/fixtures/flags/resolve/entry-extensions.js] 144 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-extensions reporter should build #1 1`] = `"dde9a044"`;
+exports[`Flags > --resolve-* > resolve-extensions reporter should build #1 1`] = `"ca182ef7"`;
 
 exports[`Flags > --resolve-* > resolve-loader-alias reporter should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/resolve/entry-loader-alias.js",
   "mode": "development",
   "plugins": Array [
@@ -84,24 +69,18 @@ Object {
   ],
   "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
   "resolveLoader": undefined,
-  "stats": Object {
-    "builtAt": false,
-    "hash": false,
-    "timings": false,
-  },
 }
 `;
 
 exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #0 1`] = `
 "Version: webpack 4.3.0
-      Asset      Size  Chunks             Chunk Names
-    main.js  16.2 KiB    main  [emitted]  main
-main.js.map  17.3 KiB    main  [emitted]  main
-Entrypoint main = main.js main.js.map
+  Asset    Size  Chunks             Chunk Names
+main.js  17 KiB    main  [emitted]  main
+Entrypoint main = main.js
 [./node_modules/path-browserify/index.js] 6.04 KiB {main} [built]
 [./node_modules/process/browser.js] 5.29 KiB {main} [built]
 [./test/fixtures/flags/resolve sync recursive ^aliased!.*$] ./test/fixtures/flags/resolve sync ^aliased!.*$ 160 bytes {main} [built]
 [./test/fixtures/flags/resolve/entry-loader-alias.js] 283 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #1 1`] = `"67feaf8b"`;
+exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #1 1`] = `"bc875688"`;

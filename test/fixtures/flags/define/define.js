@@ -10,7 +10,7 @@ const plugins = [new DefinePlugin({ test: 'invalid' })];
 module.exports = {
   arguments: ['--define.DEFINE', `'valid'`],
 
-  config: merge(config, {
+  config: merge({}, config, {
     entry: resolve(__dirname, './entry.js'),
     plugins: config.plugins.concat(plugins),
   }),

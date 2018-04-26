@@ -7,7 +7,7 @@ const aliasPath = resolve(__dirname, 'aliased');
 module.exports = {
   arguments: ['--resolve-alias.aliased', `${aliasPath}`],
 
-  config: Object.assign(config, {
+  config: Object.assign({}, config, {
     entry: resolve(__dirname, 'entry.js'),
   }),
 

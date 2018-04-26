@@ -2,7 +2,6 @@
 
 exports[`Flags > --output-* > output should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/flags/output/output-entry.js",
   "mode": "development",
   "output": Object {
@@ -20,10 +19,9 @@ Object {
 
 exports[`Flags > --output-* > output should build #0 1`] = `
 "Version: webpack 4.3.0
-        Asset      Size  Chunks             Chunk Names
-    bundle.js  3.38 KiB    main  [emitted]  main
-bundle.js.map  2.84 KiB    main  [emitted]  main
-Entrypoint main = bundle.js bundle.js.map
+    Asset      Size  Chunks             Chunk Names
+bundle.js  3.51 KiB    main  [emitted]  main
+Entrypoint main = bundle.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
 [./test/fixtures/flags/output/output-entry.js] 80 bytes {main} [built]"
 `;

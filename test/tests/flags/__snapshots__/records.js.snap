@@ -2,7 +2,6 @@
 
 exports[`Flags > --records-* > input-output should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -18,18 +17,16 @@ Object {
 
 exports[`Flags > --records-* > input-output should build #0 1`] = `
 "Version: webpack 4.3.0
-      Asset      Size  Chunks             Chunk Names
-    main.js  2.92 KiB    main  [emitted]  main
-main.js.map  2.66 KiB    main  [emitted]  main
-Entrypoint main = main.js main.js.map
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --records-* > input-output should build #1 1`] = `"f349b18e"`;
+exports[`Flags > --records-* > input-output should build #1 1`] = `"bf58edd8"`;
 
 exports[`Flags > --records-* > path should apply #0 1`] = `
 Object {
-  "devtool": "source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -44,11 +41,10 @@ Object {
 
 exports[`Flags > --records-* > path should build #0 1`] = `
 "Version: webpack 4.3.0
-      Asset      Size  Chunks             Chunk Names
-    main.js  2.92 KiB    main  [emitted]  main
-main.js.map  2.66 KiB    main  [emitted]  main
-Entrypoint main = main.js main.js.map
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --records-* > path should build #1 1`] = `"f349b18e"`;
+exports[`Flags > --records-* > path should build #1 1`] = `"bf58edd8"`;

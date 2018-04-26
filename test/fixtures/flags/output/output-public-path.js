@@ -5,7 +5,7 @@ const config = require('../../common/webpack.config');
 module.exports = {
   arguments: ['--output-public-path', '/output-path/'],
 
-  config: Object.assign(config, {
+  config: Object.assign({}, config, {
     entry: resolve(__dirname, './output-entry.js'),
   }),
 

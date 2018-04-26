@@ -5,7 +5,7 @@ const config = require('../../common/webpack.config');
 module.exports = {
   arguments: ['--watch-aggregate-timeout', 400],
 
-  config: Object.assign(config, {
+  config: Object.assign({}, config, {
     entry: resolve(__dirname, '../../common/entry-a.js'),
   }),
 
