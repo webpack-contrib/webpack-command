@@ -14,4 +14,6 @@ module.exports = {
       watch: true,
     },
   ],
+
+  group: 'advanced',
 };

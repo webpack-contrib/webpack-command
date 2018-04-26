@@ -13,4 +13,6 @@ module.exports = {
       mode: 'development',
     },
   ],
+
+  group: 'advanced',
 };

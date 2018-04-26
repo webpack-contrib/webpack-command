@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --watch > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-flag",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+}
+`;
+
+exports[`Flags > --watch-aggregate-timeout > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-flag",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+  "watchOptions": Object {
+    "aggregateTimeout": 400,
+  },
+}
+`;
+
+exports[`Flags > --watch-poll > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-flag",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+  "watchOptions": Object {
+    "poll": 1000,
+  },
+}
+`;
+
+exports[`Flags > --watch-stdin > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-flag",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+  "watch": true,
+  "watchOptions": Object {
+    "stdin": true,
+  },
+}
+`;

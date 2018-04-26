@@ -43,4 +43,5 @@ describe('Flags', () => {
   require('./tests/flags/resolve');
   require('./tests/flags/run-mode');
   require('./tests/flags/target');
+  require('./tests/flags/watch');
 });

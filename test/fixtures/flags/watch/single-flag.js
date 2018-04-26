@@ -9,4 +9,6 @@ module.exports = {
     entry: resolve(__dirname, '../../common/entry-a.js'),
     name: 'single-flag',
   }),
+
+  group: 'advanced',
 };
