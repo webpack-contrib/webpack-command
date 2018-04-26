@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lib/config > distill() #0 1`] = `
+Array [
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-a.js",
+    "mode": "development",
+  },
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-b.js",
+    "mode": "development",
+  },
+]
+`;
+
+exports[`lib/config > distill() --config-name #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/common/entry-b.js",
+  "mode": "development",
+  "name": "test",
+}
+`;

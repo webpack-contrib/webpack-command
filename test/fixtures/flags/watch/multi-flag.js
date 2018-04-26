@@ -14,5 +14,5 @@ module.exports = {
     },
   ],
 
-  group: 'advanced',
+  group: 'general',
 };

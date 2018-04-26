@@ -15,33 +15,42 @@ global.fixturePath = (path) => join(__dirname, './fixtures', path);
 
 require('./snapshot');
 
-describe('Flags', () => {
-  require('./tests/flags/bail');
-  require('./tests/flags/cache');
-  require('./tests/flags/config');
+require('./tests/config');
+require('./tests/flags');
+
+const flags = [
+  'bail',
+  'cache',
+  'config',
 
   // TODO: something is up with the name thing, it's naming every config before and
   // after this test 'single-object' and I need to track it down.
-  // require('./tests/flags/config-name');
+  // 'config-name',
 
-  require('./tests/flags/context');
-  require('./tests/flags/debug');
-  require('./tests/flags/define');
-  require('./tests/flags/devtool');
-  require('./tests/flags/entry');
-  require('./tests/flags/hot');
-  require('./tests/flags/mode');
-  require('./tests/flags/module-bind');
-  require('./tests/flags/optimize');
-  require('./tests/flags/output');
-  require('./tests/flags/plugin');
-  require('./tests/flags/prefetch');
-  require('./tests/flags/profile');
-  require('./tests/flags/provide');
-  require('./tests/flags/records');
-  require('./tests/flags/reporter');
-  require('./tests/flags/resolve');
-  require('./tests/flags/run-mode');
-  require('./tests/flags/target');
-  require('./tests/flags/watch');
+  'context',
+  'debug',
+  'define',
+  'devtool',
+  'entry',
+  'hot',
+  'mode',
+  'module-bind',
+  'optimize',
+  'output',
+  'plugin',
+  'prefetch',
+  'profile',
+  'provide',
+  'records',
+  'reporter',
+  'resolve',
+  'run-mode',
+  'target',
+  'watch',
+];
+
+describe('Flags', () => {
+  for (const test of flags) {
+    require(`./tests/flags/${test}`);
+  }
 });

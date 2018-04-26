@@ -10,5 +10,5 @@ module.exports = {
     name: 'single-flag',
   }),
 
-  group: 'advanced',
+  group: 'general',
 };
