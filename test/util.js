@@ -32,9 +32,10 @@ module.exports = {
   apply(options) {
     const { argv, fixture, group } = prep(options);
     const { config } = fixture;
-    const result = group.apply(argv, config);
 
-    return result;
+    const result = [].concat(config).map((conf) => group.apply(argv, conf));
+
+    return result.length > 1 ? result : result[0];
   },
 
   build(config) {

@@ -8,7 +8,7 @@ module.exports = {
     './test/fixtures/common/entry-b.js',
   ],
 
-  config,
+  config: Object.assign({}, config),
 
   group: 'general',
 };
