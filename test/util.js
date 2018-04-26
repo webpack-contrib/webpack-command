@@ -60,6 +60,15 @@ module.exports = {
 
   prep,
 
+  test(title, module, fn) {
+    describe(title, function desc() {
+      this.beforeEach(function be() {
+        this.currentTest.file = module.filename;
+      });
+      fn();
+    });
+  },
+
   validate(options) {
     const { argv, group } = prep(options);
 

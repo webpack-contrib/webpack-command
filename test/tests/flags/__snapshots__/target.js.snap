@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --target > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+  "stats": Object {
+    "builtAt": false,
+    "hash": false,
+    "timings": false,
+  },
+  "target": "node",
+}
+`;
+
+exports[`Flags > --target > should build #0 1`] = `
+"Version: webpack 4.3.0
+      Asset      Size  Chunks             Chunk Names
+    main.js  3.13 KiB    main  [emitted]  main
+main.js.map  2.85 KiB    main  [emitted]  main
+Entrypoint main = main.js main.js.map
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --target > should build #1 1`] = `"c4994062"`;

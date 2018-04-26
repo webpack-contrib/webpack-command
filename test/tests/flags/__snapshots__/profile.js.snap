@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --profile > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "profile": true,
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --profile > should build #0 1`] = `"f349b18e"`;

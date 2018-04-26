@@ -1,11 +1,11 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
 const fixture = 'provide/provide';
 const opts = { fixture };
 
 let config;
 
-describe('--provide', () => {
+test('--provide', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });

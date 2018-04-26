@@ -1,11 +1,11 @@
-const { apply, build, distContains, validate } = require('../../util');
+const { apply, build, distContains, test, validate } = require('../../util');
 
 const fixture = 'define/define';
 const opts = { fixture };
 
 let config;
 
-describe('--define', () => {
+test('--define', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });

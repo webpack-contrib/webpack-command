@@ -1,6 +1,6 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
-describe('--run-dev', () => {
+test('--run-dev', module, () => {
   const fixture = 'run-mode/run-dev';
   const opts = { fixture };
 
@@ -23,7 +23,7 @@ describe('--run-dev', () => {
     }));
 });
 
-describe('--run-prod', () => {
+test('--run-prod', module, () => {
   const fixture = 'run-mode/run-prod';
   const opts = { fixture };
 

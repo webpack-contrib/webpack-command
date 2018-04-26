@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --bail > should apply #0 1`] = `
+Object {
+  "bail": true,
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/bail/entry.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;

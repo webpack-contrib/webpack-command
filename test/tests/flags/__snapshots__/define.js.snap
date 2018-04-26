@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --define > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/define/entry.js",
+  "mode": "development",
+  "plugins": Array [
+    DefinePlugin {
+      "definitions": Object {
+        "DEFINE": "'valid'",
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+    DefinePlugin {
+      "definitions": Object {
+        "test": "invalid",
+      },
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --define > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  3.04 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/flags/define/entry.js] 91 bytes {main} [built]"
+`;

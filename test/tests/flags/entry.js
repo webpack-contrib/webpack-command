@@ -1,7 +1,7 @@
-const { apply, build, crcDist, prep, validate } = require('../../util');
+const { apply, build, crcDist, prep, test, validate } = require('../../util');
 const parseEntries = require('../../../lib/entry');
 
-describe('--entry', () => {
+test('--entry', module, () => {
   it('should parse input', () => {
     const entries = [
       fixturePath('common/entry-a.js'),

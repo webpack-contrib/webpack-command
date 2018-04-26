@@ -1,7 +1,7 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
 // TODO: test stylish reporter
-describe('--reporter', () => {
+test('--reporter', module, () => {
   for (const name of ['basic']) {
     const fixture = `reporter/${name}`;
     const opts = { fixture };

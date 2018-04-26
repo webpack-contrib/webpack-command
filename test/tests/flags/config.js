@@ -1,10 +1,10 @@
 const cli = require('../../../lib');
-const { prep, validate } = require('../../util');
+const { prep, test, validate } = require('../../util');
 
 const fixture = 'config/config';
 const opts = { fixture };
 
-describe('--config', () => {
+test('--config', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });

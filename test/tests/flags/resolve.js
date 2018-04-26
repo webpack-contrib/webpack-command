@@ -1,6 +1,6 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
-describe('--resolve-*', () => {
+test('--resolve-*', module, () => {
   for (const name of [
     'resolve-alias',
     'resolve-extensions',

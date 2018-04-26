@@ -1,4 +1,4 @@
-const { apply, build, validate } = require('../../util');
+const { apply, build, test, validate } = require('../../util');
 
 const fixtures = [
   'output-chunk-filename',
@@ -13,7 +13,7 @@ const fixtures = [
   'output',
 ];
 
-describe('--output-*', () => {
+test('--output-*', module, () => {
   for (const name of fixtures) {
     const fixture = `output/${name}`;
     const opts = { fixture };

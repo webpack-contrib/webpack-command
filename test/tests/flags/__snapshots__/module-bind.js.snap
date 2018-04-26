@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --module-bind > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": undefined,
+        "loader": "<PROJECT_ROOT>/test/fixtures/common/loader",
+        "test": /\\\\\\.js\\$/,
+      },
+    ],
+  },
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --module-bind > should bind and build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.97 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 49 bytes {main} [built]"
+`;
+
+exports[`Flags > --module-bind > should bind and build #1 1`] = `"7d13f958"`;
+
+exports[`Flags > --module-bind-all > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": undefined,
+        "loader": "json-loader",
+        "test": /\\\\\\.json\\$/,
+      },
+      Object {
+        "enforce": "pre",
+        "loader": "<PROJECT_ROOT>/test/fixtures/common/loader-pre",
+        "test": /\\\\\\.js\\$/,
+      },
+      Object {
+        "enforce": "post",
+        "loader": "<PROJECT_ROOT>/test/fixtures/common/loader-post",
+        "test": /\\\\\\.js\\$/,
+      },
+    ],
+  },
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --module-bind-all > should bind and build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset   Size  Chunks             Chunk Names
+main.js  3 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 78 bytes {main} [built]"
+`;
+
+exports[`Flags > --module-bind-all > should bind and build #1 1`] = `"bc18d981"`;
+
+exports[`Flags > --module-bind-post > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": "post",
+        "loader": "<PROJECT_ROOT>/test/fixtures/common/loader-post",
+        "test": /\\\\\\.js\\$/,
+      },
+    ],
+  },
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --module-bind-post > should bind and build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.98 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 60 bytes {main} [built]"
+`;
+
+exports[`Flags > --module-bind-post > should bind and build #1 1`] = `"c2baf8bb"`;
+
+exports[`Flags > --module-bind-pre > should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "enforce": "pre",
+        "loader": "<PROJECT_ROOT>/test/fixtures/common/loader-pre",
+        "test": /\\\\\\.js\\$/,
+      },
+    ],
+  },
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --module-bind-pre > should bind and build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.98 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 59 bytes {main} [built]"
+`;
+
+exports[`Flags > --module-bind-pre > should bind and build #1 1`] = `"f9b24195"`;

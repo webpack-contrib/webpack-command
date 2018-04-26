@@ -1,13 +1,13 @@
 const ModuleNotFoundError = require('webpack/lib/ModuleNotFoundError');
 
-const { apply, build, validate } = require('../../util');
+const { apply, build, test, validate } = require('../../util');
 
 const fixture = 'bail/bail';
 const opts = { fixture };
 
 let config;
 
-describe('--bail', () => {
+test('--bail', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });

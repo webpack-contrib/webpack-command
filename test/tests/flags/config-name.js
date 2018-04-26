@@ -1,5 +1,5 @@
 const { distill } = require('../../../lib/config');
-const { prep, validate } = require('../../util');
+const { prep, test, validate } = require('../../util');
 
 const fixtures = [
   'multi-duplicate',
@@ -9,7 +9,7 @@ const fixtures = [
   'single-object',
 ];
 
-describe('--config-name', () => {
+test('--config-name', module, () => {
   for (const name of fixtures) {
     const opts = {
       fixture: `config-name/${name}`,

@@ -1,6 +1,6 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
-describe('--optimize-*', () => {
+test('--optimize-*', module, () => {
   for (const name of ['max-chunks', 'min-chunk-size', 'minimize']) {
     const fixture = `optimize/optimize-${name}`;
     const opts = { fixture };

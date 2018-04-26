@@ -1,6 +1,6 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
-describe('--records-*', () => {
+test('--records-*', module, () => {
   for (const name of ['input-output', 'path']) {
     const fixture = `records/records-${name}`;
     const opts = { fixture };

@@ -1,14 +1,14 @@
 const { existsSync: exists } = require('fs');
 const { resolve } = require('path');
 
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
 const fixture = 'devtool/devtool';
 const opts = { fixture };
 
 let config;
 
-describe('--devtool', () => {
+test('--devtool', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });

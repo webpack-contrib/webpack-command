@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --mode > dev should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --mode > dev should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --mode > dev should build #1 1`] = `"bf58edd8"`;
+
+exports[`Flags > --mode > prod should apply #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "production",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --mode > prod should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset       Size  Chunks             Chunk Names
+main.js  641 bytes       0  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {0} [built]"
+`;
+
+exports[`Flags > --mode > prod should build #1 1`] = `"969d6c1f"`;

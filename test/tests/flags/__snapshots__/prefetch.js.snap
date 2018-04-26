@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --prefetch > should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/prefetch/entry.js",
+  "mode": "development",
+  "plugins": Array [
+    PrefetchPlugin {
+      "request": "./test/fixtures/flags/prefetch/dependency.js",
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --prefetch > should build #0 1`] = `
+"Version: webpack 4.3.0
+      Asset      Size  Chunks             Chunk Names
+    main.js  3.46 KiB    main  [emitted]  main
+main.js.map   2.9 KiB    main  [emitted]  main
+Entrypoint main = main.js main.js.map
+[./test/fixtures/flags/prefetch/dependency.js] 53 bytes {main} [built] [prefetched]
+[./test/fixtures/flags/prefetch/entry.js] 119 bytes {main} [built]"
+`;
+
+exports[`Flags > --prefetch > should build #1 1`] = `"20a31aae"`;

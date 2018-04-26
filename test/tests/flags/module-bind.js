@@ -1,6 +1,13 @@
-const { apply, build, crcDist, distContains, validate } = require('../../util');
+const {
+  apply,
+  build,
+  crcDist,
+  distContains,
+  test,
+  validate,
+} = require('../../util');
 
-describe('--module-bind', () => {
+test('--module-bind', module, () => {
   const fixture = `module-bind/bind`;
   const opts = { fixture };
 
@@ -24,7 +31,7 @@ describe('--module-bind', () => {
     }));
 });
 
-describe('--module-bind-pre', () => {
+test('--module-bind-pre', module, () => {
   const fixture = `module-bind/bind-pre`;
   const opts = { fixture };
 
@@ -48,7 +55,7 @@ describe('--module-bind-pre', () => {
     }));
 });
 
-describe('--module-bind-post', () => {
+test('--module-bind-post', module, () => {
   const fixture = `module-bind/bind-post`;
   const opts = { fixture };
 
@@ -72,7 +79,7 @@ describe('--module-bind-post', () => {
     }));
 });
 
-describe('--module-bind-all', () => {
+test('--module-bind-all', module, () => {
   const fixture = `module-bind/bind-all`;
   const opts = { fixture };
 
@@ -90,7 +97,6 @@ describe('--module-bind-all', () => {
 
   it(`should bind and build`, () =>
     build(config).then((result) => {
-      expect(distContains('loader: module.exports')).toBe(true);
       expect(distContains(`pre = true`)).toBe(true);
       expect(distContains(`post = true`)).toBe(true);
       expect(result).toMatchSnapshot();

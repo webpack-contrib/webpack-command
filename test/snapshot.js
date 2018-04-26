@@ -47,17 +47,13 @@ function nameTest(test) {
 
 function match(received) {
   const { file } = current;
-
   const snapshotState = new SnapshotState(file, {
     updateSnapshot: argv.update ? 'all' : 'new',
   });
-
   const matcher = toMatchSnapshot.bind({
     snapshotState,
     currentTestName: nameTest(current),
   });
-
-  // console.log(snapshotState);
 
   const result = matcher(received);
 

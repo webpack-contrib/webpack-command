@@ -1,6 +1,6 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
-describe('--debug', () => {
+test('--mode', module, () => {
   for (const name of ['dev', 'prod']) {
     const fixture = `mode/${name}`;
     const opts = { fixture };

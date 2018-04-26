@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --config > should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.85 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./src/index.js] 43 bytes {main} [built]"
+`;

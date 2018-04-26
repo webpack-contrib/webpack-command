@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --records-* > input-output should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "recordsInputPath": "<PROJECT_ROOT>/dist/records-input.json",
+  "recordsOutputPath": "<PROJECT_ROOT>/dist/records-output.json",
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --records-* > input-output should build #0 1`] = `
+"Version: webpack 4.3.0
+      Asset      Size  Chunks             Chunk Names
+    main.js  2.92 KiB    main  [emitted]  main
+main.js.map  2.66 KiB    main  [emitted]  main
+Entrypoint main = main.js main.js.map
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --records-* > input-output should build #1 1`] = `"f349b18e"`;
+
+exports[`Flags > --records-* > path should apply #0 1`] = `
+Object {
+  "devtool": "source-map",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "recordsPath": "<PROJECT_ROOT>/dist/records.json",
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --records-* > path should build #0 1`] = `
+"Version: webpack 4.3.0
+      Asset      Size  Chunks             Chunk Names
+    main.js  2.92 KiB    main  [emitted]  main
+main.js.map  2.66 KiB    main  [emitted]  main
+Entrypoint main = main.js main.js.map
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --records-* > path should build #1 1`] = `"f349b18e"`;

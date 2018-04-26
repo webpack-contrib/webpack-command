@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --entry > multi should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": Object {
+    "main": Array [
+      "./test/fixtures/common/entry-a.js",
+      "./test/fixtures/common/entry-b.js",
+    ],
+  },
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --entry > multi should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  3.98 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
+[./test/fixtures/common/entry-b.js] 41 bytes {main} [built]
+   [0] multi ./test/fixtures/common/entry-a.js ./test/fixtures/common/entry-b.js 40 bytes {main} [built]"
+`;
+
+exports[`Flags > --entry > multi should build #1 1`] = `"80e5fd27"`;
+
+exports[`Flags > --entry > should parse flag array #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse flag object #0 1`] = `
+Object {
+  "a": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "b": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+}
+`;
+
+exports[`Flags > --entry > should parse input #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse input + flag array #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse input + flag object #0 1`] = `
+Object {
+  "a": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "b": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  "main": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+}
+`;
+
+exports[`Flags > --entry > should parse input + single flag #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse single flag #0 1`] = `
+Object {
+  "main": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+}
+`;
+
+exports[`Flags > --entry > single should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": Object {
+    "main": "./test/fixtures/common/entry-a.js",
+  },
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`Flags > --entry > single should build #0 1`] = `
+"Version: webpack 4.3.0
+  Asset      Size  Chunks             Chunk Names
+main.js  2.96 KiB    main  [emitted]  main
+Entrypoint main = main.js
+[./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
+`;
+
+exports[`Flags > --entry > single should build #1 1`] = `"bf58edd8"`;

@@ -1,11 +1,11 @@
-const { apply, build, crcDist, validate } = require('../../util');
+const { apply, build, crcDist, test, validate } = require('../../util');
 
 const fixture = 'profile/profile';
 const opts = { fixture };
 
 let config;
 
-describe('--profile', () => {
+test('--profile', module, () => {
   it(`should validate`, () => {
     expect(validate(opts)).toEqual(true);
   });
