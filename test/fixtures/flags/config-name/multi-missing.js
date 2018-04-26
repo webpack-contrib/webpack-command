@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const WebpackWoofError = require('../../../../lib/WebpackWoofError');
+const WebpackCommandError = require('../../../../lib/WebpackCommandError');
 
 module.exports = {
   arguments: ['--config-name', 'multi-missing'],
@@ -19,5 +19,5 @@ module.exports = {
 
   group: 'config',
 
-  throws: WebpackWoofError,
+  throws: WebpackCommandError,
 };

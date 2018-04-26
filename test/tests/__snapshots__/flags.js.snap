@@ -13,7 +13,7 @@ exports[`lib/flags > should display help #0 1`] = `
   --reporter                    Specifies the reporter tpo use for generating console output for a build
   --run-dev                     shortcut for --debug --devtool eval-cheap-module-source-map --output-pathinfo
   --run-prod                    shortcut for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
-  --version                     Display the webpack-woof version
+  --version                     Display the webpack-command version
   --watch                       Watch the filesystem for changes
 
 [4mAdvanced[24m
@@ -86,7 +86,7 @@ exports[`lib/flags > should display help #1 1`] = `
   --reporter                    Specifies the reporter tpo use for generating console output for a build
   --run-dev                     shortcut for --debug --devtool eval-cheap-module-source-map --output-pathinfo
   --run-prod                    shortcut for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
-  --version                     Display the webpack-woof version
+  --version                     Display the webpack-command version
   --watch                       Watch the filesystem for changes
 
 [4mAdvanced[24m

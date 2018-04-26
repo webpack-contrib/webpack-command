@@ -1,11 +1,11 @@
 const Reporter = require('../../../lib/reporters/Reporter');
-const WebpackWoofError = require('../../../lib/WebpackWoofError');
+const WebpackCommandError = require('../../../lib/WebpackCommandError');
 
 module.exports = class TestReporter extends Reporter {
   render(error, stats) {
     if (stats.hasErrors()) {
       const info = stats.toJson();
-      throw new WebpackWoofError(info.errors);
+      throw new WebpackCommandError(info.errors);
     }
 
     const result = stats.toString({

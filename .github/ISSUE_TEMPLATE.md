@@ -13,7 +13,7 @@
 * Node Version:
 * NPM Version:
 * webpack Version:
-* webpack-woof Version:
+* webpack-command Version:
 
 <!-- Please place an x (no spaces!) in all [ ] that apply -->
 
