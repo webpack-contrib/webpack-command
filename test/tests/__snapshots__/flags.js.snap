@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`lib/flags > should display help #0 1`] = `
+exports[`lib/flags > should display help #1 1`] = `
 "  --context                     The root directory for resolving entry point and stats
   --debug                       Switch loaders to debug mode
   --devtool                     Enable devtool for better debugging experience.
@@ -73,7 +73,7 @@ exports[`lib/flags > should display help #0 1`] = `
 "
 `;
 
-exports[`lib/flags > should display help #1 1`] = `
+exports[`lib/flags > should return minimist opts #0 1`] = `
 Object {
   "bail": Object {
     "type": "boolean",

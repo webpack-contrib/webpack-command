@@ -7,7 +7,7 @@ test('lib/flags', module, () => {
     expect(result).toMatchSnapshot();
   });
 
-  it(`should display help`, () => {
+  it(`should return minimist opts`, () => {
     const result = flags.opts();
     expect(result).toMatchSnapshot();
   });
