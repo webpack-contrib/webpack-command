@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+
 const WebpackCommandError = require('../../../../lib/WebpackCommandError');
 
 module.exports = {
