@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`teach command > should forget module #0 1`] = `
+"{
+  \\"help\\": \\"./HelpCommand\\",
+  \\"teach\\": \\"./TeachCommand\\"
+}"
+`;
+
+exports[`teach command > should learn module #0 1`] = `
+"{
+  \\"help\\": \\"./HelpCommand\\",
+  \\"teach\\": \\"./TeachCommand\\",
+  \\"test\\": \\"<PROJECT_ROOT>/test/fixtures/commands/TestCommand.js\\"
+}"
+`;
+
+exports[`teach command > should throw for duplicate modules #0 1`] = `"The 'test' command was already added via <PROJECT_ROOT>/test/fixtures/commands/TestCommand.js. Use \`webpack teach --command test --forget\` and try again."`;
+
+exports[`teach command > should throw for missing --module #0 1`] = `"The command module 'missing-module' was not found."`;
+
+exports[`teach command > should throw for no --command value #0 1`] = `"The value of --command must be a String."`;
+
+exports[`teach command > should throw for no --module #0 1`] = `"The --module flag is required."`;
+
+exports[`teach command > should throw for no --module value #0 1`] = `"The value of --module must be a String."`;
+
+exports[`teach command > should throw for no args #0 1`] = `"Cannot destructure property \`command\` of 'undefined' or 'null'."`;

@@ -9,7 +9,7 @@ let command;
 const commands = getCommands();
 const { HelpCommandError } = HelpCommand;
 
-test('lib/flags', module, () => {
+test('help command', module, () => {
   it(`should instantiate`, () => {
     command = new HelpCommand();
     expect(command).toBeInstanceOf(HelpCommand);

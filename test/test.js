@@ -16,6 +16,7 @@ global.fixturePath = (path) => join(__dirname, './fixtures', path);
 require('./snapshot');
 
 require('./tests/commands/help');
+require('./tests/commands/teach');
 
 require('./tests/config');
 require('./tests/flags');

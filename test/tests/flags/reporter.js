@@ -1,6 +1,6 @@
 const strip = require('strip-ansi');
 
-const { apply, build, crcDist, test, validate } = require('../../util');
+const { apply, build, test, validate } = require('../../util');
 
 test('--reporter', module, () => {
   for (const name of ['basic', 'basic-multi', 'stylish', 'stylish-multi']) {
@@ -24,7 +24,6 @@ test('--reporter', module, () => {
         expect(
           strip(result).replace(/Δt \d+ms/g, '<duration>')
         ).toMatchSnapshot();
-        expect(crcDist()).toMatchSnapshot();
       }));
   }
 });
