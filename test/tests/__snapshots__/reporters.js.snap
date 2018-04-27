@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StylishReporter > problems/stylish-problems reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems/entry-problems.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+}
+`;
+
+exports[`StylishReporter > problems/stylish-problems reporter should build #0 1`] = `
+"
+webpack v4.3.0
+
+4474f28e09deb860ead2
+  size     name                     module                                                        status
+  160 B    problems sync recursive  ./test/fixtures/reporters/stylish/problems sync               built
+  148 B    entry-problems.js        ./test/fixtures/reporters/stylish/problems/entry-problems.js  built ⚠ ✖
+  177 B    image.jpg                ./test/fixtures/reporters/stylish/problems/image.jpg          built failed ✖
+
+  size     name                     asset                                                         status
+  5.02 kB  main                     main.js                                                       emitted
+
+  <duration> 
+
+
+./test/fixtures/reporters/stylish/problems/entry-problems.js
+  5:15  error    Module not found: Error: Can't resolve 'test' in
+                 '<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems'
+  2:12  warning  Critical dependency: require function is used in a way in which
+                 dependencies cannot be statically extracted
+
+./test/fixtures/reporters/stylish/problems/image.jpg
+  1:0  error  Module parse failed: Unexpected character '�' You may need an
+              appropriate loader to handle this file type. (Source code omitted for
+              this binary file)  @
+              ./test/fixtures/reporters/stylish/problems/entry-problems.js 7:0-22
+
+✖ 3 problems (2 errors, 1 warning)"
+`;
+
+exports[`StylishReporter > stylish reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+}
+`;
+
+exports[`StylishReporter > stylish reporter should build #0 1`] = `
+"
+webpack v4.3.0
+
+2c2cd86350a8b0063c7b
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  3.03 kB  main        main.js                            emitted
+
+  <duration> 
+"
+`;
+
+exports[`StylishReporter > stylish-multi reporter should apply #0 1`] = `
+Array [
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+  },
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": Array [
+      "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+      "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+    ],
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+  },
+]
+`;
+
+exports[`StylishReporter > stylish-multi reporter should build #0 1`] = `
+"
+webpack v4.3.0
+
+2c2cd86350a8b0063c7b
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  3.03 kB  main        main.js                            emitted
+
+  <duration> 
+
+a456539a5a4519ee4935
+  size     name        module                                                                     status
+  41 B     entry-b.js  ./test/fixtures/common/entry-b.js                                          built
+  41 B     entry-c.js  ./test/fixtures/common/entry-c.js                                          built
+  40 B     0           multi ./test/fixtures/common/entry-b.js ./test/fixtures/common/entry-c.js  built
+
+  size     name        asset                                                                      status
+  4.14 kB  main        main.js                                                                    emitted
+
+  <duration> 
+
+total <duration>"
+`;

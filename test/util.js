@@ -11,8 +11,9 @@ const compiler = require('../lib/compiler');
 const { validate } = require('../lib/flags/util');
 
 function prep(options) {
+  const fixtureType = options.fixtureType || 'flags';
   /* eslint-disable global-require, import/no-dynamic-require */
-  const fixture = require(`./fixtures/flags/${options.fixture}`);
+  const fixture = require(`./fixtures/${fixtureType}/${options.fixture}`);
   const group = require(`../lib/flags/${fixture.group}`);
   const args = fixture.arguments;
   const minimistOpts = buildMinimistOptions(

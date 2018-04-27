@@ -1,11 +1,16 @@
 const strip = require('strip-ansi');
 
-const { apply, build, test, validate } = require('../../util');
+const { apply, build, test, validate } = require('../util');
 
-test('--reporter', module, () => {
-  for (const name of ['basic', 'basic-multi']) {
-    const fixture = `reporter/${name}`;
-    const opts = { fixture };
+test('StylishReporter', module, () => {
+  for (const name of [
+    'stylish',
+    'stylish-multi',
+    'problems/stylish-problems',
+  ]) {
+    const fixture = `stylish/${name}`;
+    const fixtureType = 'reporters';
+    const opts = { fixture, fixtureType };
 
     let config;
 

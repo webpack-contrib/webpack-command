@@ -20,6 +20,7 @@ require('./tests/commands/teach');
 
 require('./tests/config');
 require('./tests/flags');
+require('./tests/reporters');
 
 const flags = [
   'bail',
