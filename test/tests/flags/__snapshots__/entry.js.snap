@@ -30,3 +30,61 @@ Entrypoint main = main.js
 `;
 
 exports[`Flags > --entry > multi should build #1 1`] = `"80e5fd27"`;
+
+exports[`Flags > --entry > should parse flag array #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse flag object #0 1`] = `
+Object {
+  "a": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "b": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+}
+`;
+
+exports[`Flags > --entry > should parse input #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse input + flag array #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse input + flag object #0 1`] = `
+Object {
+  "a": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "b": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  "main": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+}
+`;
+
+exports[`Flags > --entry > should parse input + single flag #0 1`] = `
+Object {
+  "main": Array [
+    "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  ],
+}
+`;
+
+exports[`Flags > --entry > should parse single flag #0 1`] = `
+Object {
+  "main": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+}
+`;

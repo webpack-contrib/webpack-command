@@ -82,6 +82,50 @@ Child
 
 exports[`Flags > --reporter > basic-multi reporter should build #1 1`] = `"430cf587"`;
 
+exports[`Flags > --reporter > problems/stylish-problems reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/flags/reporter/problems/entry-problems.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+}
+`;
+
+exports[`Flags > --reporter > problems/stylish-problems reporter should build #0 1`] = `
+"
+webpack v4.3.0
+
+c252c01aebc3791a5e6e
+  size     name                     module                                                     status
+  160 B    problems sync recursive  ./test/fixtures/flags/reporter/problems sync               built
+  148 B    entry-problems.js        ./test/fixtures/flags/reporter/problems/entry-problems.js  built ⚠ ✖
+  177 B    image.jpg                ./test/fixtures/flags/reporter/problems/image.jpg          built failed ✖
+
+  size     name                     asset                                                      status
+  4.96 kB  main                     main.js                                                    emitted
+
+  <duration> 
+
+
+./test/fixtures/flags/reporter/problems/entry-problems.js
+  5:15  error    Module not found: Error: Can't resolve 'test' in
+                 '<PROJECT_ROOT>/test/fixtures/flags/reporter/problems'
+  2:12  warning  Critical dependency: require function is used in a way in which
+                 dependencies cannot be statically extracted
+
+./test/fixtures/flags/reporter/problems/image.jpg
+  1:0  error  Module parse failed: Unexpected character '�' You may need an
+              appropriate loader to handle this file type. (Source code omitted for
+              this binary file)  @
+              ./test/fixtures/flags/reporter/problems/entry-problems.js 7:0-22
+
+✖ 3 problems (2 errors, 1 warning)"
+`;
+
 exports[`Flags > --reporter > stylish reporter should apply #0 1`] = `
 Object {
   "context": "<PROJECT_ROOT>",
