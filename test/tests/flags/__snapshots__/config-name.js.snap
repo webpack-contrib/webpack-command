@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flags > --config-name > multi-duplicate should find config #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  "mode": "development",
+  "name": "multi-duplicate",
+}
+`;
+
+exports[`Flags > --config-name > multi-found should find config #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+  "mode": "development",
+  "name": "multi-found",
+}
+`;
+
+exports[`Flags > --config-name > single-array should find config #0 1`] = `
+Object {
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "name": "single-object",
+}
+`;

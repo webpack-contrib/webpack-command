@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Zero Config > should run #0 1`] = `
+"ℹ ｢config｣: Config not found, trying webpack.config.es6
+ℹ ｢config｣: Config not found, trying webpack.config.flow
+ℹ ｢config｣: Config not found, trying webpack.config.mjs
+ℹ ｢config｣: Config not found, trying webpack.config.ts
+ℹ ｢webpack｣: Starting Build
+ℹ ｢webpack｣: Build Finished
+
+webpack v4.3.0
+
+0ca52704a1563f34b0b3
+  size   name  module          status
+  43 B   0     ./src/index.js  built
+
+  size   name  asset           status
+  573 B  main  main.js         emitted
+
+  <duration> 
+
+
+configuration
+  0:0  warning  The 'mode' option has not been set. Set 'mode' option to 'development'
+                or 'production' to enable defaults for this environment.
+
+⚠  1 problem (0 errors, 1 warning)"
+`;
+
+exports[`Zero Config > should run #1 1`] = `
+"ℹ ｢config｣: Config not found, trying webpack.config.es6
+ℹ ｢config｣: Config not found, trying webpack.config.flow
+ℹ ｢config｣: Config not found, trying webpack.config.mjs
+ℹ ｢config｣: Config not found, trying webpack.config.ts
+ℹ ｢webpack｣: Starting Build
+ℹ ｢webpack｣: Build Finished
+
+webpack v4.3.0
+
+0ca52704a1563f34b0b3
+  size   name  module          status
+  43 B   0     ./src/index.js  built
+
+  size   name  asset           status
+  573 B  main  main.js         emitted
+
+  <duration> 
+
+
+configuration
+  0:0  warning  The 'mode' option has not been set. Set 'mode' option to 'development'
+                or 'production' to enable defaults for this environment.
+
+⚠  1 problem (0 errors, 1 warning)"
+`;

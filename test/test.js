@@ -18,9 +18,11 @@ require('./snapshot');
 require('./tests/commands/help');
 require('./tests/commands/teach');
 
+require('./tests/bad-config');
 require('./tests/config');
 require('./tests/flags');
 require('./tests/reporters');
+require('./tests/zero-config');
 
 const flags = [
   'bail',
@@ -29,7 +31,7 @@ const flags = [
 
   // TODO: something is up with the name thing, it's naming every config before and
   // after this test 'single-object' and I need to track it down.
-  // 'config-name',
+  'config-name',
 
   'context',
   'debug',
