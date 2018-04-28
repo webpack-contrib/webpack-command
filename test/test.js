@@ -18,11 +18,10 @@ require('./snapshot');
 require('./tests/commands/help');
 require('./tests/commands/teach');
 
-require('./tests/bad-config');
+require('./tests/cli');
 require('./tests/config');
 require('./tests/flags');
 require('./tests/reporters');
-require('./tests/zero-config');
 
 const flags = [
   'bail',
