@@ -34,8 +34,8 @@ These include:
 - A beautiful default user experience with output driven by
 [`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
 - Custom Reporters 🤯
-- Support for `webpack` configuration in any language that provides a `require`
-hook.
+- Support for `webpack` configuration in any language or compiler that provides
+a `require` hook.
 - Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`.
 - Highly focused on the User Experience and UX details.
 
@@ -69,7 +69,9 @@ $ webpack --help
     --log-level                   Limit all process console messages to a specific level and above
                                   Levels: trace, debug, info, warn, error, silent
     --log-time                    Instruct the logger for webpack-serve and dependencies to display a timestamp
-    --reporter                    Specifies the reporter tpo use for generating console output for a build
+    --reporter                    Specifies the reporter to use for generating console output for a build
+    --require                     Preload one or more modules before loading the webpack configuration
+                                  Typically used for language-specific require hooks
     --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map --output-pathinfo
     --run-prod                    An alias for --optimize-minimize --define process.env.NODE_ENV="production"
     --version                     Display the webpack-command version
@@ -98,7 +100,6 @@ $ webpack --help
     --config                      Path to the config file
     --config-name                 Name of the config to use
     --config-register             Deprecated. Please use --require.
-                                  Preload one or more modules before loading the webpack configuration
     --mode                        Specifies the build mode to use; development or production
 
   Modules
@@ -210,6 +211,20 @@ using `webpack-cli`.
 
 The **default** reporter and displays beautiful output using the same code
 that drives [`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
+
+## Configuration Languages and Compilers
+
+`webpack-command` allows users to leverage any language that provides a require
+hook. To leverage this feature, define your configs as such for the following
+languages/compilers:
+
+- Babel ES6 Modules: `webpack.config.js` or `webpack.config.es6`, and use
+`--require babel-register`
+- Flow: `webpack.config.js` or `webpack.config.flow`, and use
+`--require flow-remove-types/register`
+- TypeScript: `webpack.config.ts`, and use `--require ts-node/register`
+
+Other hooks may work for additional language or compiler support.
 
 ## Gotchas
 
