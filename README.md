@@ -12,11 +12,32 @@
 
 # webpack-command
 
-🔳 A proof-of-concept for a lightweight, modular webpack CLI
+🔳 A proof-of-concept for a lightweight, modular, and opinionated webpack CLI.
+
+For users coming from `webpack-cli`, please read about
+[the differences](#differences-with-webpack-cli) between this module and
+`webpack-cli`.
 
 ## Requirements
 
-This module requires a minimum of Node v6.9.0 and Webpack v4.0.0.
+This module requires a minimum of Node v6.14.0 and Webpack v4.0.0.
+
+## Benefits
+
+`webpack-command` has many advantages over other CLI experiences for `webpack`.
+These include:
+
+- A full test suite with 200 tests and 100% coverage.
+- A 93% smaller package cost versus `webpack-cli`.
+- Validation of commands, entries, and flags before further execution.
+- Extensible third-party commands. Include only what you need.
+- A beautiful default user experience with output driven by
+[`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
+- Custom Reporters 🤯
+- Support for `webpack` configuration in any language that provides a `require`
+hook.
+- Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`.
+- Highly focused on the User Experience and UX details.
 
 ## Getting Started
 
@@ -26,21 +47,175 @@ To begin, you'll need to install `webpack-command`:
 $ npm install webpack-command --save-dev
 ```
 
-## TODO
+## CLI
 
-- docs: `teach` command, `pre` and `post` install, `--forget`
-- docs: writing commands
-- docs: `webpack file.js file2.js` input must be existing file/directory, `entry: { cli: [ ... ]}`
-- docs: `webpack --entry file --entry file2`
-- docs: `webpack --entry.name file --entry.name file2`
-- docs: `--resolve-alias.jquery jquery.plugin`
-- docs: `--resolve-loader-alias.catalog catalog/lib/loader`
-- docs: --entry overridden by default : https://github.com/webpack/webpack-cli/pull/358
+```console
+$ webpack --help
 
-## Bennies
+  🐕 A lightweight, modular, and opinionated webpack CLI
 
-- will validate all flag types first
-- will catch misspelled flags
+  Usage
+    $ webpack [<config>, ...options]
+    $ webpack <entry-file> [...<entry-file>] <output-file>
+    $ weboack <command> [...options]
+
+  Options
+    --context                     The root directory for resolving entry point and stats
+    --debug                       Switch loaders to debug mode
+    --devtool                     Enable devtool for better debugging experience.
+                                  e.g. --devtool eval-cheap-module-source-map
+    --entry                       The entry point
+    --help                        Show usage information and the options listed here
+    --log-level                   Limit all process console messages to a specific level and above
+                                  Levels: trace, debug, info, warn, error, silent
+    --log-time                    Instruct the logger for webpack-serve and dependencies to display a timestamp
+    --reporter                    Specifies the reporter tpo use for generating console output for a build
+    --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map --output-pathinfo
+    --run-prod                    An alias for --optimize-minimize --define process.env.NODE_ENV="production"
+    --version                     Display the webpack-command version
+    --watch                       Watch the filesystem for changes
+
+  Advanced
+    --bail                        Abort the compilation on first error
+    --cache                       Enable in memory caching
+    --define                      Define any free var in the bundle
+    --hot                         Enables Hot Module Replacement
+    --plugin                      Load this plugin
+    --prefetch                    Prefetch this request
+                                  e.g. --prefetch ./file.js
+    --profile                     Profile the compilation and include information in stats
+    --provide                     Provide these modules as free vars in all modules
+                                  e.g. --provide.jQuery jquery
+    --records-input-path          Path to the records file (reading)
+    --records-output-path         Path to the records file (writing)
+    --records-path                Path to the records file
+    --target                      The targeted execution environment
+    --watch-aggregate-timeout     Timeout for gathering changes while watching
+    --watch-poll                  The polling interval for watching (also enable polling)
+    --watch-stdin                 Exit the process when stdin is closed
+
+  Configuration File
+    --config                      Path to the config file
+    --config-name                 Name of the config to use
+    --config-register             Deprecated. Please use --require.
+                                  Preload one or more modules before loading the webpack configuration
+    --mode                        Specifies the build mode to use; development or production
+
+  Modules
+    --module-bind                 Bind an extension to a loader
+    --module-bind-post            Bind an extension to a postLoader
+    --module-bind-pre             Bind an extension to a preLoader
+
+  Optimization
+    --optimize-max-chunks         Try to keep the chunk count below a limit
+    --optimize-min-chunk-size     Try to keep the chunk size above a limit
+    --optimize-minimize           Minimize javascript and switches loaders to minimizing
+
+  Output
+    --output                      The output path and file for compilation assets
+    --output-chunk-filename       The output filename for additional chunks
+    --output-filename             The output filename of the bundle
+    --output-jsonp-function       The name of the JSONP function used for chunk loading
+    --output-library              Expose the exports of the entry point as library
+    --output-library-target       The type for exposing the exports of the entry point as library
+    --output-path                 The output path for compilation assets
+    --output-pathinfo             Include a comment with the request for every dependency (require, import, etc.)
+    --output-public-path          The public path for the assets
+    --output-source-map-filename  The output filename for the SourceMap
+
+  Resolver
+    --resolve-alias               Setup a module alias for resolving
+                                  e.g. --resolve-alias.jquery jquery.plugin
+    --resolve-extensions          Setup extensions that should be used to resolve modules
+                                  e.g. .es6,.js
+    --resolve-loader-alias        Setup a loader alias for resolving
+
+
+    For further documentation, visit https://webpack.js.org/api/cli
+
+  Commands
+    help
+    teach
+
+    Type `webpack help <command>` for more information
+```
+
+## Commands
+
+`webpack-command` allows users to extend the `webpack` CLI experience by
+including a few helpful built-in commands, and providing a means to develop
+third-party commands.
+
+### Built-In Commands
+
+- [Help Command](docs/HelpCommand.md)
+- [Teach Command](docs/TeachCommand.md)
+
+## Flags
+
+For more documentation on flags, please see the
+[`webpack-cli` documentation](https://webpack.js.org/api/cli/).
+
+## Differences With `webpack-cli`
+
+While this project aims for parity with `webpack-cli` in nearly all aspects,
+there are some notable differences. Included in those differences is the note
+that this module includes the bare minimum of commands to provide a `webpack`
+CLI. Commands like `init`, `migrate`, and `update` are relegated to separate,
+user-installed modules.
+
+That said, the following differences should also be noted:
+
+### Key=Value Pairs
+
+Certain flags passed in `webpack-cli` allow for a key-value pair for
+pairing an alias with the alias value. e.g. `--entry name=file`. This module
+adopts a CLI-standard approach by using the syntax `--flag.key value` instead,
+and does not support the `key=value` syntax.
+
+### Entries
+
+Specifying entries by either flag (`--flag`) or input (`webpack <file>`) require
+that the file or directory specified exist.
+
+Entries passed with a comma-separated value `--entry file,file2` are deprecated
+and should be migrated to use the CLI-standard `--entry file --entry file2`
+syntax.
+
+Entries passed by flag in `webpack-cli` using `--entry name=file` should be
+migrated to use the `--entry.name file` syntax.
+
+### Resolve Alias
+
+Resolve aliases passed by flag in `webpack-cli` using
+`--resolve-alias alias=value` should be migrated to use the `--entry.name file`
+syntax.
+
+### Resolve Loader Alias
+
+Resolve aliases passed by flag in `webpack-cli` using
+`--resolve-loader-alias alias=value` should be migrated to use the
+`--resolve-loader-alias.alias value` syntax.
+
+## Reporters
+
+`webpack-command` ships with two available reporters:
+
+#### `basic`
+
+Displays the default `webpack` output, the same you'll see
+using `webpack-cli`.
+
+#### `stylish`
+
+The **default** reporter and displays beautiful output using the same code
+that drives [`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
+
+## Gotchas
+
+Any entry files specified will overwrite entries in a `webpack.config.js` file
+as of [this Pull Request](https://github.com/webpack/webpack-cli/pull/358) in
+`webpack-cli`.
 
 ## Contributing
 

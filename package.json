@@ -1,7 +1,7 @@
 {
   "name": "webpack-command",
   "version": "0.0.0",
-  "description": "🐕 A lightweight, modular webpack CLI",
+  "description": "🐕 A lightweight, modular, and opinionated webpack CLI",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-command",
   "author": "Andrew Powell <andrew@shellscape.org>",

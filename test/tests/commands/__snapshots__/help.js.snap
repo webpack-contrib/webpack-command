@@ -15,6 +15,7 @@ exports[`help command > should display help #0 1`] = `
     $ webpack help <command>
 
   [4mExamples[24m
+    $ webpack help
     $ webpack help init
     $ webpack help serve
 "
@@ -30,6 +31,7 @@ exports[`help command > should display help for the help command #0 1`] = `
     $ webpack help <command>
 
   [4mExamples[24m
+    $ webpack help
     $ webpack help init
     $ webpack help serve
 "

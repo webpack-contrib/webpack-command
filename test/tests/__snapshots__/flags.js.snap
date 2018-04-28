@@ -11,8 +11,8 @@ exports[`lib/flags > should display help #0 1`] = `
                                 [2mLevels: trace, debug, info, warn, error, silent[22m
   --log-time                    Instruct the logger for webpack-serve and dependencies to display a timestamp
   --reporter                    Specifies the reporter tpo use for generating console output for a build
-  --run-dev                     shortcut for --debug --devtool eval-cheap-module-source-map --output-pathinfo
-  --run-prod                    shortcut for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
+  --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map --output-pathinfo
+  --run-prod                    An alias for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
   --version                     Display the webpack-command version
   --watch                       Watch the filesystem for changes
 
@@ -26,7 +26,7 @@ exports[`lib/flags > should display help #0 1`] = `
                                 [2me.g. --prefetch ./file.js[22m
   --profile                     Profile the compilation and include information in stats
   --provide                     Provide these modules as free vars in all modules
-                                [2me.g. --provide jQuery=jquery[22m
+                                [2me.g. --provide.jQuery jquery[22m
   --records-input-path          Path to the records file (reading)
   --records-output-path         Path to the records file (writing)
   --records-path                Path to the records file
@@ -44,7 +44,7 @@ exports[`lib/flags > should display help #0 1`] = `
 
 [4mModules[24m
   --module-bind                 Bind an extension to a loader
-  --module-bind-post            Bind an extension to a prostLoader
+  --module-bind-post            Bind an extension to a postLoader
   --module-bind-pre             Bind an extension to a preLoader
 
 [4mOptimization[24m
@@ -56,7 +56,7 @@ exports[`lib/flags > should display help #0 1`] = `
   --output                      The output path and file for compilation assets
   --output-chunk-filename       The output filename for additional chunks
   --output-filename             The output filename of the bundle
-  --output-jsonp-function       The name of the jsonp function used for chunk loading
+  --output-jsonp-function       The name of the JSONP function used for chunk loading
   --output-library              Expose the exports of the entry point as library
   --output-library-target       The type for exposing the exports of the entry point as library
   --output-path                 The output path for compilation assets
@@ -66,7 +66,7 @@ exports[`lib/flags > should display help #0 1`] = `
 
 [4mResolver[24m
   --resolve-alias               Setup a module alias for resolving
-                                [2me.g. jquery=jquery.plugin[22m
+                                [2me.g. --resolve-alias.jquery jquery.plugin[22m
   --resolve-extensions          Setup extensions that should be used to resolve modules
                                 [2me.g. .es6,.js[22m
   --resolve-loader-alias        Setup a loader alias for resolving
