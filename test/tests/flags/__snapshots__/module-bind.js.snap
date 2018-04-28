@@ -23,7 +23,7 @@ Object {
 `;
 
 exports[`Flags > --module-bind > should bind and build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.97 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -65,7 +65,7 @@ Object {
 `;
 
 exports[`Flags > --module-bind-all > should bind and build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset   Size  Chunks             Chunk Names
 main.js  3 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -97,7 +97,7 @@ Object {
 `;
 
 exports[`Flags > --module-bind-post > should bind and build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.98 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -129,7 +129,7 @@ Object {
 `;
 
 exports[`Flags > --module-bind-pre > should bind and build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.98 KiB    main  [emitted]  main
 Entrypoint main = main.js

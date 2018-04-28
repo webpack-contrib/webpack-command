@@ -20,7 +20,7 @@ Object {
 `;
 
 exports[`Flags > --reporter > basic reporter should build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.96 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -65,7 +65,7 @@ Array [
 `;
 
 exports[`Flags > --reporter > basic-multi reporter should build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
 Child
       Asset      Size  Chunks             Chunk Names
     main.js  2.96 KiB    main  [emitted]  main
@@ -77,7 +77,7 @@ Child
     Entrypoint main = main.js
     [./test/fixtures/common/entry-b.js] 41 bytes {main} [built]
     [./test/fixtures/common/entry-c.js] 41 bytes {main} [built]
-       [0] multi ./test/fixtures/common/entry-b.js ./test/fixtures/common/entry-c.js 40 bytes {main} [built]"
+    [0] multi ./test/fixtures/common/entry-b.js ./test/fixtures/common/entry-c.js 40 bytes {main} [built]"
 `;
 
 exports[`Flags > --reporter > basic-multi reporter should build #1 1`] = `"430cf587"`;

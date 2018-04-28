@@ -21,6 +21,7 @@ Object {
         },
         "warningsFilter": [Function],
       },
+      "sourceMapsCache": WeakMap {},
     },
     NamedModulesPlugin {
       "options": Object {},
@@ -31,7 +32,7 @@ Object {
 `;
 
 exports[`Flags > --plugin > should build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset       Size  Chunks             Chunk Names
 main.js  912 bytes    main  [emitted]  main
 Entrypoint main = main.js

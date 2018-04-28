@@ -12,7 +12,7 @@ const command = new TeachCommand();
 
 test('teach command', module, () => {
   it('should throw for no args', () => {
-    const stub = () => command.run({});
+    const stub = () => command.run({ flags: {} });
 
     expect(stub).toThrowErrorMatchingSnapshot(TeachCommandError);
   });

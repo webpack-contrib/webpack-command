@@ -8,9 +8,9 @@ exports[`Commands > should add directories to entries #0 1`] = `
 ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
-webpack v4.3.0
+webpack v4.6.0
 
-0ca52704a1563f34b0b3
+953ce188d35af8c002f0
   size   name  module                                     status
   43 B   0     ./test/fixtures/flags/config/src/index.js  built
 
@@ -21,8 +21,9 @@ webpack v4.3.0
 
 
 configuration
-  0:0  warning  The 'mode' option has not been set. Set 'mode' option to 'development'
-                or 'production' to enable defaults for this environment.
+  0:0  warning  The 'mode' option has not been set, webpack will fallback to
+                'production' for this value. Set 'mode' option to 'development' or
+                'production' to enable defaults for each environment.
 
 ⚠  1 problem (0 errors, 1 warning)"
 `;
@@ -154,7 +155,7 @@ exports[`Zero Config > should run #0 1`] = `
 
 webpack <version>
 
-0ca52704a1563f34b0b3
+953ce188d35af8c002f0
   size   name  module          status
   43 B   0     ./src/index.js  built
 
@@ -165,8 +166,9 @@ webpack <version>
 
 
 configuration
-  0:0  warning  The 'mode' option has not been set. Set 'mode' option to 'development'
-                or 'production' to enable defaults for this environment.
+  0:0  warning  The 'mode' option has not been set, webpack will fallback to
+                'production' for this value. Set 'mode' option to 'development' or
+                'production' to enable defaults for each environment.
 
 ⚠  1 problem (0 errors, 1 warning)"
 `;

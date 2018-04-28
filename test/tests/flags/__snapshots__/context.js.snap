@@ -15,7 +15,7 @@ Object {
 `;
 
 exports[`Flags > --context > should build #0 1`] = `
-"Version: webpack 4.3.0
+"Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
 main.js  2.84 KiB    main  [emitted]  main
 Entrypoint main = main.js

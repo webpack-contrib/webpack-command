@@ -57,6 +57,7 @@
     "meant": "^1.0.1",
     "meow": "^4.0.0",
     "merge-options": "^1.0.0",
+    "object.values": "^1.0.4",
     "opn": "^5.3.0",
     "plur": "^3.0.0",
     "pretty-bytes": "^4.0.2",
@@ -107,7 +108,7 @@
     "prettier": "^1.11.1",
     "standard-version": "^4.3.0",
     "stylelint-webpack-plugin": "^0.10.4",
-    "webpack": "^4.0.0",
+    "webpack": "^4.6.0",
     "webpack-defaults": "^2.3.0"
   },
   "keywords": [

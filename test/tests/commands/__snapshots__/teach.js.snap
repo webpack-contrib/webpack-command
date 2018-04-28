@@ -25,4 +25,4 @@ exports[`teach command > should throw for no --module #0 1`] = `"The --module fl
 
 exports[`teach command > should throw for no --module value #0 1`] = `"The value of --module must be a String."`;
 
-exports[`teach command > should throw for no args #0 1`] = `"Cannot destructure property \`command\` of 'undefined' or 'null'."`;
+exports[`teach command > should throw for no args #0 1`] = `"The --command flag is required."`;
