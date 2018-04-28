@@ -27,17 +27,17 @@ This module requires a minimum of Node v6.14.0 and Webpack v4.0.0.
 `webpack-command` has many advantages over other CLI experiences for `webpack`.
 These include:
 
-- A full test suite with 200 tests and 100% coverage.
-- A 93% smaller package cost versus `webpack-cli`.
-- Validation of commands, entries, and flags before further execution.
-- Extensible third-party commands. Include only what you need.
+- A full test suite with 190 tests and 95% coverage (so close to 100% 💪)
+- A 93% smaller package cost versus `webpack-cli`
+- Validation of commands, entries, and flags before further execution
+- Extensible third-party commands. Include only what you need
 - A beautiful default user experience with output driven by
-[`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
+[`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish)
 - Custom Reporters 🤯
 - Support for `webpack` configuration in any language or compiler that provides
-a `require` hook.
-- Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`.
-- Highly focused on the User Experience and UX details.
+a `require` hook
+- Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`
+- Highly focused on the User Experience and UX details
 
 ## Getting Started
 
