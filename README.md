@@ -226,6 +226,9 @@ languages/compilers:
 
 Other hooks may work for additional language or compiler support.
 
+_Note: Compilers are not part of, nor built-into this module. To use a specific
+compiler, you must install it first._
+
 ## Gotchas
 
 Any entry files specified will overwrite entries in a `webpack.config.js` file
