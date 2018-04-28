@@ -41,7 +41,7 @@ a `require` hook
 
 And last, but not least, Did-You-Mean suggestions for flags:
 
-![did you mean](assets/did-you-mean.png)
+<img width="427" src="https://raw.githubusercontent.com/webpack-contrib/webpack-command/master/assets/did-you-mean.png" alt="did you mean">
 
 ## Getting Started
 
