@@ -1,4 +1,4 @@
-const { apply, build, crcDist, test, validate } = require('../../util');
+const { apply, build, test, validate } = require('../../util');
 
 test('--optimize-*', module, () => {
   for (const name of ['max-chunks', 'min-chunk-size', 'minimize']) {
@@ -20,7 +20,6 @@ test('--optimize-*', module, () => {
     it(`${name} should build`, () =>
       build(config).then((result) => {
         expect(result.replace(/\d+\.\d+ KiB/, '<size>')).toMatchSnapshot();
-        expect(crcDist()).toMatchSnapshot();
       }));
   }
 });
