@@ -10,7 +10,9 @@ exports[`lib/flags > should display help #0 1`] = `
   --log-level                   Limit all process console messages to a specific level and above
                                 [2mLevels: trace, debug, info, warn, error, silent[22m
   --log-time                    Instruct the logger for webpack-serve and dependencies to display a timestamp
-  --reporter                    Specifies the reporter tpo use for generating console output for a build
+  --reporter                    Specifies the reporter to use for generating console output for a build
+  --require                     Preload one or more modules before loading the webpack configuration
+                                Typically used for language-specific require hooks
   --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map --output-pathinfo
   --run-prod                    An alias for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
   --version                     Display the webpack-command version
@@ -39,7 +41,7 @@ exports[`lib/flags > should display help #0 1`] = `
   --config                      Path to the config file
   --config-name                 Name of the config to use
   --config-register             [1mDeprecated.[22m Please use --require.
-                                Preload one or more modules before loading the webpack configuration
+
   --mode                        Specifies the build mode to use; development or production
 
 [4mModules[24m
@@ -273,6 +275,12 @@ Object {
   "reporter": Object {
     "type": "string",
   },
+  "require": Object {
+    "type": Array [
+      "string",
+      "array",
+    ],
+  },
   "resolve-alias": Object {
     "type": "object",
   },
@@ -329,7 +337,7 @@ Please check the command executed.]
 `;
 
 exports[`lib/flags/util > should suggest alternatives #0 1`] = `
-[Error: Flags were specified that weren't recognized:
+[Error: Flags were specified that were not recognized:
 
   [34m--debg[39m  Did you mean [1m--debug[22m?
   [34m--wath[39m  Did you mean [1m--watch[22m?
