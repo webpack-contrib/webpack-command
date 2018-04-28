@@ -29,15 +29,19 @@ These include:
 
 - A full test suite with 190 tests and 95% coverage (so close to 100% 💪)
 - A 93% smaller package cost versus `webpack-cli`
+- Highly focused on the User Experience and detail
 - Validation of commands, entries, and flags before further execution
-- Extensible third-party commands. Include only what you need
+- Extensible third-party commands. Include only what you need!
 - A beautiful default user experience with output driven by
 [`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish)
 - Custom Reporters 🤯
 - Support for `webpack` configuration in any language or compiler that provides
 a `require` hook
 - Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`
-- Highly focused on the User Experience and UX details
+
+And last, but not least, Did-You-Mean suggestions for flags:
+
+![did you mean](assets/did-you-mean.png)
 
 ## Getting Started
 
