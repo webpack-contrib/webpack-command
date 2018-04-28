@@ -22,7 +22,7 @@ Object {
 exports[`Flags > --reporter > basic reporter should build #0 1`] = `
 "Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
-main.js  2.96 KiB    main  [emitted]  main
+main.js  <size>    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
@@ -68,12 +68,12 @@ exports[`Flags > --reporter > basic-multi reporter should build #0 1`] = `
 "Version: webpack 4.6.0
 Child
       Asset      Size  Chunks             Chunk Names
-    main.js  2.96 KiB    main  [emitted]  main
+    main.js  <size>    main  [emitted]  main
     Entrypoint main = main.js
     [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]
 Child
       Asset      Size  Chunks             Chunk Names
-    main.js  4.04 KiB    main  [emitted]  main
+    main.js  <size>    main  [emitted]  main
     Entrypoint main = main.js
     [./test/fixtures/common/entry-b.js] 41 bytes {main} [built]
     [./test/fixtures/common/entry-c.js] 41 bytes {main} [built]

@@ -22,7 +22,9 @@ test('--reporter', module, () => {
     it(`${name} reporter should build`, () =>
       build(config).then((result) => {
         expect(
-          strip(result).replace(/Δt \d+ms/g, '<duration>')
+          strip(result)
+            .replace(/Δt \d+ms/g, '<duration>')
+            .replace(/\d+\.\d+ KiB/g, '<size>')
         ).toMatchSnapshot();
       }));
   }

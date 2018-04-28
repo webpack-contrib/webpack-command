@@ -19,7 +19,7 @@ test('--optimize-*', module, () => {
 
     it(`${name} should build`, () =>
       build(config).then((result) => {
-        expect(result).toMatchSnapshot();
+        expect(result.replace(/\d+\.\d+ KiB/, '<size>')).toMatchSnapshot();
         expect(crcDist()).toMatchSnapshot();
       }));
   }

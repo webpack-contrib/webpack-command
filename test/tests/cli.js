@@ -29,7 +29,7 @@ test('Zero Config', module, () => {
         .replace(/Δt \d+ms/g, '<duration>')
         .replace(/v\d\.\d\.\d/, '<version>')
     ).toMatchSnapshot();
-  });
+  }).timeout(4000);
 });
 
 test('Commands', module, () => {
