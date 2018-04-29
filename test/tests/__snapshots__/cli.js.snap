@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Commands > should add directories to entries #0 1`] = `
-"ℹ ｢config｣: Config not found, trying webpack.config.es6
-ℹ ｢config｣: Config not found, trying webpack.config.flow
-ℹ ｢config｣: Config not found, trying webpack.config.mjs
-ℹ ｢config｣: Config not found, trying webpack.config.ts
-ℹ ｢webpack｣: Starting Build
+"ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
 webpack v4.6.0
@@ -147,11 +143,7 @@ exports[`Commands > should show teach command help #0 1`] = `
 `;
 
 exports[`Zero Config > should run #0 1`] = `
-"ℹ ｢config｣: Config not found, trying webpack.config.es6
-ℹ ｢config｣: Config not found, trying webpack.config.flow
-ℹ ｢config｣: Config not found, trying webpack.config.mjs
-ℹ ｢config｣: Config not found, trying webpack.config.ts
-ℹ ｢webpack｣: Starting Build
+"ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
 webpack <version>
