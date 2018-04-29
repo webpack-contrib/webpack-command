@@ -20,3 +20,4 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 .nyc_output
+data/commands.json
