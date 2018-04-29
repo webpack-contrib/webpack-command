@@ -175,6 +175,20 @@ user-installed modules.
 
 That said, the following differences should also be noted:
 
+### The `--env` Flag is Nuked
+
+[Environment Variables](https://en.wikipedia.org/wiki/Environment_variable) have
+been around a very, very long time. `webpack-cli` chose to introduce a feature
+that let users specify environment variables via a flag. This module does not
+include that feature. Instead, users should make use of environment variables
+the traditional, standard way:
+
+`$ NEAT_VAR=woo webpack ...`
+
+And access the values via `process.env`. Alternatively, if users are in need of
+cross-platform environment variables, a tool such as
+[`cross-env`](https://www.npmjs.com/package/cross-env) should be leveraged.
+
 ### Key=Value Pairs
 
 Certain flags passed in `webpack-cli` allow for a key-value pair for
