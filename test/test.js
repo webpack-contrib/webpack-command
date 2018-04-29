@@ -27,11 +27,7 @@ const flags = [
   'bail',
   'cache',
   'config',
-
-  // TODO: something is up with the name thing, it's naming every config before and
-  // after this test 'single-object' and I need to track it down.
   'config-name',
-
   'context',
   'debug',
   'define',

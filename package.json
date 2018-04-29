@@ -20,7 +20,7 @@
     "lint": "eslint --cache lib test",
     "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
     "lint-staged": "lint-staged",
-    "prepublishOnly": "cp -r lib/commands/defaults.json data/commands.json",
+    "prepublishOnly": "mkdir -p data && cp -r lib/commands/defaults.json data/commands.json",
     "release": "standard-version",
     "release:ci": "conventional-github-releaser -p angular",
     "release:validate": "commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)",
@@ -34,6 +34,7 @@
     "defaults": "webpack-defaults"
   },
   "files": [
+    "data/",
     "lib/"
   ],
   "peerDependencies": {

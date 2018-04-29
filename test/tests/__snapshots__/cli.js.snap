@@ -120,8 +120,9 @@ exports[`Commands > should show cli help #0 1`] = `
 
   Examples
     $ webpack
-    $ webpack
-    $ webpack
+    $ webpack --help
+    $ webpack entry.js
+    $ webpack --config ../webpack.config.js
 "
 `;
 
