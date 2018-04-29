@@ -22,6 +22,10 @@ For users coming from `webpack-cli`, please read about
 
 This module requires a minimum of Node v6.14.0 and Webpack v4.0.0.
 
+`webpack-command` and `webpack-cli` cannot be installed at the same time, as
+they both export a bin file named `webpack`. When trying `webpack-command`,
+please `npm uninstall webpack-cli` first.
+
 ## Benefits
 
 `webpack-command` has many advantages over other CLI experiences for `webpack`.
