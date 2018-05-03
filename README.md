@@ -287,4 +287,4 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 [chat-url]: https://gitter.im/webpack/webpack
 
 [size]: https://packagephobia.now.sh/badge?p=webpack-command
-[size-url](https://packagephobia.now.sh/result?p=webpack-command
+[size-url]: (https://packagephobia.now.sh/result?p=webpack-command
