@@ -7,7 +7,7 @@ exports[`help command > should display all commands #0 1`] = `
 
 exports[`help command > should display help #0 1`] = `
 "
-  [34mhelp[39m v0.1.0
+  [34mhelp[39m v<version>
 
   Displays help for a given installed webpack command.
 
@@ -23,7 +23,7 @@ exports[`help command > should display help #0 1`] = `
 
 exports[`help command > should display help for the help command #0 1`] = `
 "
-  [34mhelp[39m v0.1.0
+  [34mhelp[39m v<version>
 
   Displays help for a given installed webpack command.
 
@@ -39,7 +39,7 @@ exports[`help command > should display help for the help command #0 1`] = `
 
 exports[`help command > should display help for the teach command #0 1`] = `
 "
-  [34mteach[39m v0.1.0
+  [34mteach[39m v<version>
 
   Teaches webpack-command that a command has been installed and is available.
 

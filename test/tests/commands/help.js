@@ -21,7 +21,8 @@ test('help command', module, () => {
   });
 
   it(`should display help`, () => {
-    const result = command.help();
+    let result = command.help();
+    result = result.replace(/\d+\.\d+\.\d+/, '<version>');
     expect(result).toMatchSnapshot();
   });
 
@@ -36,7 +37,8 @@ test('help command', module, () => {
       input: ['help', 'help'],
     };
     const stdout = false;
-    const result = command.run(cli, { stdout });
+    let result = command.run(cli, { stdout });
+    result = result.replace(/\d+\.\d+\.\d+/, '<version>');
 
     expect(result).toMatchSnapshot();
   });
@@ -47,7 +49,8 @@ test('help command', module, () => {
       input: ['help', 'teach'],
     };
     const stdout = false;
-    const result = command.run(cli, { stdout });
+    let result = command.run(cli, { stdout });
+    result = result.replace(/\d+\.\d+\.\d+/, '<version>');
 
     expect(result).toMatchSnapshot();
   });
