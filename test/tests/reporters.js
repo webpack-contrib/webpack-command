@@ -1,6 +1,20 @@
 const strip = require('strip-ansi');
 
+const Reporter = require('../../lib/reporters/Reporter');
 const { apply, build, test, validate } = require('../util');
+
+test('Reporter', module, () => {
+  it('should have methods', () => {
+    expect(Reporter).toBeDefined();
+
+    const reporter = new Reporter({ compiler: {}, config: {} });
+
+    expect(reporter.compiler).toBeDefined();
+    expect(reporter.config).toBeDefined();
+    expect(reporter.progress).toBeDefined();
+    expect(reporter.render).toBeDefined();
+  });
+});
 
 test('StylishReporter', module, () => {
   for (const name of [
