@@ -77,6 +77,7 @@ $ webpack --help
     --log-level                   Limit all process console messages to a specific level and above
                                   Levels: trace, debug, info, warn, error, silent
     --log-time                    Instruct the logger for webpack-serve and dependencies to display a timestamp
+    --progress                    Instructs webpack to track and display build progress
     --reporter                    Specifies the reporter to use for generating console output for a build
     --require                     Preload one or more modules before loading the webpack configuration
                                   Typically used for language-specific require hooks
@@ -222,7 +223,9 @@ Resolve aliases passed by flag in `webpack-cli` using
 
 ## Reporters
 
-`webpack-command` ships with two available reporters:
+`webpack-command` supports custom, user-defined reporters which allow users
+full control over how build data is presented. By default, it ships with two
+available reporters:
 
 #### `basic`
 
@@ -233,6 +236,9 @@ using `webpack-cli`.
 
 The **default** reporter and displays beautiful output using the same code
 that drives [`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish).
+
+Building your own reporter is as easy as inheriting from the `Reporter` class
+located at `lib/reporters/Reporter.js`.
 
 ## Configuration Languages and Compilers
 
