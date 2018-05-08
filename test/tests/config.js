@@ -18,6 +18,18 @@ test('lib/config', module, () => {
     expect(result).toMatchSnapshot();
   });
 
+  it(`distill() plugins`, () => {
+    const result = distill({}, { plugins: [] }, { plugins: [1] });
+    expect(result).toMatchSnapshot();
+  });
+
+  it(`distill() plugins from config array`, () => {
+    const conf = [].concat(config);
+    conf[0].plugins = [];
+    const result = distill({}, conf, { plugins: [1] });
+    expect(result).toMatchSnapshot();
+  });
+
   it(`distill() --config-name`, () => {
     config[1].name = 'test';
 

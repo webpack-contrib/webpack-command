@@ -20,3 +20,30 @@ Object {
   "name": "test",
 }
 `;
+
+exports[`lib/config > distill() plugins #0 1`] = `
+Object {
+  "plugins": Array [
+    1,
+  ],
+}
+`;
+
+exports[`lib/config > distill() plugins from config array #0 1`] = `
+Array [
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
+    ],
+  },
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-b.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
+    ],
+  },
+]
+`;
