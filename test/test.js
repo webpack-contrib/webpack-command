@@ -21,6 +21,7 @@ require('./tests/commands/teach');
 require('./tests/cli');
 require('./tests/config');
 require('./tests/flags');
+require('./tests/progress');
 require('./tests/reporters');
 
 const flags = [

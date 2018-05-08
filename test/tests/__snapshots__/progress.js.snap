@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`progress util > should parse args: all args #0 1`] = `
+Object {
+  "fileName": "/node_modules/lodash/lodash.js",
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": 1,
+    "modulePosition": 5,
+    "name": "building modules",
+    "percentage": 0.1,
+    "state": "active",
+    "totalModules": 6,
+  },
+}
+`;
+
+exports[`progress util > should parse args: no filename #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": 1,
+    "modulePosition": 5,
+    "name": "building modules",
+    "percentage": 0.1,
+    "state": "active",
+    "totalModules": 6,
+  },
+}
+`;
+
+exports[`progress util > should parse args: only step name #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": undefined,
+    "modulePosition": undefined,
+    "name": "finish module graph",
+    "percentage": 0.1,
+    "state": undefined,
+    "totalModules": undefined,
+  },
+}
+`;
+
+exports[`progress util > should parse args: step name and scope #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": "FlagDependencyExportsPlugin",
+  "step": Object {
+    "index": undefined,
+    "modulePosition": undefined,
+    "name": "finish module graph",
+    "percentage": 0.1,
+    "state": undefined,
+    "totalModules": undefined,
+  },
+}
+`;
