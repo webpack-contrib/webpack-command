@@ -1,6 +1,6 @@
 {
   "name": "webpack-command",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🐕 A lightweight, modular, and opinionated webpack CLI",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-command",
@@ -38,8 +38,6 @@
     "lib/"
   ],
   "peerDependencies": {
-    "enhanced-resolve": "^4.0.0",
-    "loader-utils": "^1.1.0",
     "webpack": "^4.4.0"
   },
   "dependencies": {
@@ -49,6 +47,7 @@
     "chalk": "^2.3.2",
     "debug": "^3.1.0",
     "decamelize": "^2.0.0",
+    "enhanced-resolve": "^4.0.0",
     "import-local": "^1.0.0",
     "isobject": "^3.0.1",
     "loader-utils": "^1.1.0",

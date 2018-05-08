@@ -9,6 +9,7 @@
 [![deps][deps]][deps-url]
 [![tests][tests]][tests-url]
 [![chat][chat]][chat-url]
+[![size][size]][size-url]
 
 # webpack-command
 
@@ -290,3 +291,6 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
+
+[size]: https://packagephobia.now.sh/badge?p=webpack-command
+[size-url]: https://packagephobia.now.sh/result?p=webpack-command
