@@ -13,7 +13,7 @@ webpack v4.6.0
   size   name  asset                                      status
   573 B  main  main.js                                    emitted
 
-  <duration> 
+  <duration>
 
 
 configuration
@@ -42,7 +42,7 @@ exports[`Commands > should show cli help #0 1`] = `
     --log-level                   Limit all process console messages to a specific level and above
                                   Levels: trace, debug, info, warn, error, silent
     --log-time                    Instruct the logger and dependencies to display a timestamp
-    --progress                    Instructs webopack to track and display build progress
+    --progress                    Instructs webpack to track and display build progress
                                   This is often used with --profile
     --reporter                    Specifies the reporter to use for generating console output for a build
     --require                     Preload one or more modules before loading the webpack configuration
@@ -157,7 +157,7 @@ webpack <version>
   size   name  asset           status
   573 B  main  main.js         emitted
 
-  <duration> 
+  <duration>
 
 
 configuration

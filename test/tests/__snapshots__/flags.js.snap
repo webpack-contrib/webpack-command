@@ -10,7 +10,7 @@ exports[`lib/flags > should display help #0 1`] = `
   --log-level                   Limit all process console messages to a specific level and above
                                 [2mLevels: trace, debug, info, warn, error, silent[22m
   --log-time                    Instruct the logger and dependencies to display a timestamp
-  --progress                    Instructs webopack to track and display build progress
+  --progress                    Instructs webpack to track and display build progress
                                 [2mThis is often used with --profile[22m
   --reporter                    Specifies the reporter to use for generating console output for a build
   --require                     Preload one or more modules before loading the webpack configuration
