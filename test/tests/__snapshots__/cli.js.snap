@@ -13,7 +13,7 @@ webpack v4.6.0
   size   name  asset                                      status
   573 B  main  main.js                                    emitted
 
-  <duration>
+  <duration> 
 
 
 configuration
@@ -157,7 +157,7 @@ webpack <version>
   size   name  asset           status
   573 B  main  main.js         emitted
 
-  <duration>
+  <duration> 
 
 
 configuration
