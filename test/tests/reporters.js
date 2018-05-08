@@ -1,7 +1,40 @@
 const strip = require('strip-ansi');
 
+const parse = require('../../lib/reporters/parse');
 const Reporter = require('../../lib/reporters/Reporter');
 const { apply, build, test, validate } = require('../util');
+
+test('reporter hidden', module, () => {
+  it('should parse hidden', () => {
+    const stats = {
+      filteredAssets: 1,
+      filteredModules: 2,
+    };
+    const result = parse.hidden(stats);
+
+    expect(result).toMatchSnapshot();
+  });
+});
+
+test('reporter parse', module, () => {
+  it('should parse status: cacheable', () => {
+    const result = parse.status({ cacheable: false });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should parse status: optional', () => {
+    const result = parse.status({ optional: true });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should parse status: prefetched', () => {
+    const result = parse.status({ prefetched: true });
+
+    expect(result).toMatchSnapshot();
+  });
+});
 
 test('Reporter', module, () => {
   it('should have methods', () => {
@@ -13,6 +46,9 @@ test('Reporter', module, () => {
     expect(reporter.config).toBeDefined();
     expect(reporter.progress).toBeDefined();
     expect(reporter.render).toBeDefined();
+
+    expect(reporter.progress()).toBeUndefined();
+    expect(reporter.render()).toBeUndefined();
   });
 });
 
