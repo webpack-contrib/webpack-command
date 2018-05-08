@@ -4,7 +4,7 @@ const parse = require('../../lib/reporters/parse');
 const Reporter = require('../../lib/reporters/Reporter');
 const { apply, build, test, validate } = require('../util');
 
-test('reporter hidden', module, () => {
+test('reporter parse util', module, () => {
   it('should parse hidden', () => {
     const stats = {
       filteredAssets: 1,
@@ -14,9 +14,7 @@ test('reporter hidden', module, () => {
 
     expect(result).toMatchSnapshot();
   });
-});
 
-test('reporter parse', module, () => {
   it('should parse status: cacheable', () => {
     const result = parse.status({ cacheable: false });
 

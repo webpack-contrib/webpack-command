@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const progress = require('../../lib/progress');
 const { test } = require('../util');
 
@@ -45,5 +47,14 @@ test('progress util', module, () => {
     const result = progress.parseArgs(...args);
 
     expect(result).toMatchSnapshot();
+  });
+
+  it('should apply', () => {
+    const config = { profile: false };
+    const compiler = webpack({});
+    const reporter = { progress: () => {} };
+    progress.apply(config, compiler, reporter);
+
+    expect(compiler.hooks.compilation.taps).toMatchSnapshot();
   });
 });
