@@ -15,11 +15,6 @@ test('help command', module, () => {
     expect(command).toBeInstanceOf(HelpCommand);
   });
 
-  it(`should instantiate`, () => {
-    command = new HelpCommand();
-    expect(command).toBeInstanceOf(HelpCommand);
-  });
-
   it(`should display help`, () => {
     let result = command.help();
     result = result.replace(/\d+\.\d+\.\d+/, '<version>');

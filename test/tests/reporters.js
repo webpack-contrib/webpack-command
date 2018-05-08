@@ -40,6 +40,7 @@ test('Reporter', module, () => {
 
     const reporter = new Reporter({ compiler: {}, config: {} });
 
+    expect(reporter).toBeInstanceOf(Reporter);
     expect(reporter.compiler).toBeDefined();
     expect(reporter.config).toBeDefined();
     expect(reporter.progress).toBeDefined();
