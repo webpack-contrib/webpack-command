@@ -21,6 +21,22 @@ exports[`help command > should display help #0 1`] = `
 "
 `;
 
+exports[`help command > should display help #1 1`] = `
+"
+  [34mhelp[39m v<version>
+
+  Displays help for a given installed webpack command.
+
+  [4mUsage[24m
+    $ webpack help <command>
+
+  [4mExamples[24m
+    $ webpack help
+    $ webpack help init
+    $ webpack help serve
+"
+`;
+
 exports[`help command > should display help for the help command #0 1`] = `
 "
   [34mhelp[39m v<version>

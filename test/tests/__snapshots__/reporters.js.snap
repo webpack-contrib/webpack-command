@@ -126,3 +126,23 @@ webpack v4.6.0
 
 total <duration>"
 `;
+
+exports[`reporter parse util > should parse hidden #0 1`] = `"(1 asset, 2 modules hidden)"`;
+
+exports[`reporter parse util > should parse status: cacheable #0 1`] = `
+Array [
+  "no-cache",
+]
+`;
+
+exports[`reporter parse util > should parse status: optional #0 1`] = `
+Array [
+  "optional",
+]
+`;
+
+exports[`reporter parse util > should parse status: prefetched #0 1`] = `
+Array [
+  "prefetch",
+]
+`;

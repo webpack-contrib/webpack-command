@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`progress util > should apply #0 1`] = `
+Array [
+  Object {
+    "fn": [Function],
+    "name": "FunctionModulePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "NodeSourcePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "LoaderTargetPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "JavascriptModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "JsonModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "WebAssemblyModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "SingleEntryPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "CompatibilityPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "HarmonyModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "AMDPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "CommonJsPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "LoaderPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "LoaderPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "NodeStuffPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RequireJsStuffPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "APIPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "ConstPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "UseStrictPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RequireIncludePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RequireEnsurePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RequireContextPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "ImportPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "SystemPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "EnsureChunkConditionsPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RemoveParentModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RemoveEmptyChunksPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "MergeDuplicateChunksPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "FlagIncludedChunksPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "OccurrenceOrderPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "SideEffectsFlagPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "FlagDependencyExportsPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "FlagDependencyUsagePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "ModuleConcatenationPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "NoEmitOnErrorsPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "DefinePlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "UglifyJSPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "TemplatedPathPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "RecordIdsPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "WarnCaseSensitiveModulesPlugin",
+    "type": "sync",
+  },
+  Object {
+    "fn": [Function],
+    "name": "ProgressPlugin",
+    "type": "sync",
+  },
+]
+`;
+
+exports[`progress util > should parse args: all args #0 1`] = `
+Object {
+  "fileName": "/node_modules/lodash/lodash.js",
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": 1,
+    "modulePosition": 5,
+    "name": "building modules",
+    "percentage": 0.1,
+    "state": "active",
+    "totalModules": 6,
+  },
+}
+`;
+
+exports[`progress util > should parse args: no filename #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": 1,
+    "modulePosition": 5,
+    "name": "building modules",
+    "percentage": 0.1,
+    "state": "active",
+    "totalModules": 6,
+  },
+}
+`;
+
+exports[`progress util > should parse args: only step name #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": undefined,
+  "step": Object {
+    "index": undefined,
+    "modulePosition": undefined,
+    "name": "finish module graph",
+    "percentage": 0.1,
+    "state": undefined,
+    "totalModules": undefined,
+  },
+}
+`;
+
+exports[`progress util > should parse args: step name and scope #0 1`] = `
+Object {
+  "fileName": undefined,
+  "profile": false,
+  "scope": "FlagDependencyExportsPlugin",
+  "step": Object {
+    "index": undefined,
+    "modulePosition": undefined,
+    "name": "finish module graph",
+    "percentage": 0.1,
+    "state": undefined,
+    "totalModules": undefined,
+  },
+}
+`;

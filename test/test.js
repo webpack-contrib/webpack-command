@@ -15,12 +15,14 @@ global.fixturePath = (path) => join(__dirname, './fixtures', path);
 
 require('./snapshot');
 
+require('./tests/commands/command');
 require('./tests/commands/help');
 require('./tests/commands/teach');
 
 require('./tests/cli');
 require('./tests/config');
 require('./tests/flags');
+require('./tests/progress');
 require('./tests/reporters');
 
 const flags = [
