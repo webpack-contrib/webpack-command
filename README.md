@@ -66,7 +66,7 @@ $ webpack --help
   Usage
     $ webpack [<config>, ...options]
     $ webpack <entry-file> [...<entry-file>] <output-file>
-    $ weboack <command> [...options]
+    $ webpack <command> [...options]
 
   Options
     --context                     The root directory for resolving entry point and stats
