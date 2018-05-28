@@ -3,9 +3,18 @@
 exports[`Flags > --run-dev > should apply #0 1`] = `
 Object {
   "context": "<PROJECT_ROOT>",
+  "devtool": "eval-cheap-module-source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
+    LoaderOptionsPlugin {
+      "options": Object {
+        "debug": true,
+        "test": Object {
+          "test": [Function],
+        },
+      },
+    },
     NamedModulesPlugin {
       "options": Object {},
     },
@@ -17,12 +26,12 @@ Object {
 exports[`Flags > --run-dev > should build #0 1`] = `
 "Version: webpack 4.6.0
   Asset      Size  Chunks             Chunk Names
-main.js  2.96 KiB    main  [emitted]  main
+main.js  3.36 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --run-dev > should build #1 1`] = `"bf58edd8"`;
+exports[`Flags > --run-dev > should build #1 1`] = `"1f4895c0"`;
 
 exports[`Flags > --run-prod > should apply #0 1`] = `
 Object {
