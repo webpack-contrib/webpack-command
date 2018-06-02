@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Commands > should accept custom reporters relative to the current working directory #0 1`] = `
+"ℹ ｢webpack｣: Starting Build
+ℹ ｢webpack｣: Build Finished
+Hash: 953ce188d35af8c002f0
+<version>
+<duration>
+<datetime>
+  Asset       Size  Chunks             Chunk Names
+main.js  573 bytes       0  [emitted]  main
+Entrypoint main = main.js
+[0] ../fixtures/flags/config/src/index.js 43 bytes {0} [built]
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/concepts/mode/"
+`;
+
 exports[`Commands > should add directories to entries #0 1`] = `
 "ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
