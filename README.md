@@ -213,7 +213,7 @@ migrated to use the `--entry.name file` syntax.
 ### Resolve Alias
 
 Resolve aliases passed by flag in `webpack-cli` using
-`--resolve-alias alias=value` should be migrated to use the `--entry.name file`
+`--resolve-alias alias=value` should be migrated to use the `--resolve-alias.alias value`
 syntax.
 
 ### Resolve Loader Alias
