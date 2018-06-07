@@ -12,6 +12,11 @@ test('lib/flags', module, () => {
     const result = flags.opts();
     expect(result).toMatchSnapshot();
   });
+
+  it('should parse flags cleanly', () => {
+    const result = flags.apply({}, {});
+    expect(result).toMatchSnapshot();
+  });
 });
 
 test('lib/flags/util', module, () => {

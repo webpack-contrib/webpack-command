@@ -15,45 +15,45 @@ global.fixturePath = (path) => join(__dirname, './fixtures', path);
 
 require('./snapshot');
 
-require('./tests/commands/command');
-require('./tests/commands/help');
-require('./tests/commands/teach');
+// require('./tests/commands/command');
+// require('./tests/commands/help');
+// require('./tests/commands/teach');
 
-require('./tests/cli');
+// require('./tests/cli');
 require('./tests/config');
-require('./tests/flags');
-require('./tests/progress');
-require('./tests/reporters');
-
-const flags = [
-  'bail',
-  'cache',
-  'config',
-  'config-name',
-  'context',
-  'debug',
-  'define',
-  'devtool',
-  'entry',
-  'hot',
-  'mode',
-  'module-bind',
-  'optimize',
-  'output',
-  'plugin',
-  'prefetch',
-  'profile',
-  'provide',
-  'records',
-  'reporter',
-  'resolve',
-  'run-mode',
-  'target',
-  'watch',
-];
-
-describe('Flags', () => {
-  for (const test of flags) {
-    require(`./tests/flags/${test}`);
-  }
-});
+// require('./tests/flags');
+// require('./tests/progress');
+// require('./tests/reporters');
+//
+// const flags = [
+//   'bail',
+//   'cache',
+//   'config',
+//   'config-name',
+//   'context',
+//   'debug',
+//   'define',
+//   'devtool',
+//   'entry',
+//   'hot',
+//   'mode',
+//   'module-bind',
+//   'optimize',
+//   'output',
+//   'plugin',
+//   'prefetch',
+//   'profile',
+//   'provide',
+//   'records',
+//   'reporter',
+//   'resolve',
+//   'run-mode',
+//   'target',
+//   'watch',
+// ];
+//
+// describe('Flags', () => {
+//   for (const test of flags) {
+//     require(`./tests/flags/${test}`);
+//   }
+// });

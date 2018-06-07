@@ -150,6 +150,13 @@ exports[`lib/flags > should display help #1 1`] = `
 "
 `;
 
+exports[`lib/flags > should parse flags cleanly #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "output": Object {},
+}
+`;
+
 exports[`lib/flags > should return minimist opts #0 1`] = `
 Object {
   "bail": Object {
