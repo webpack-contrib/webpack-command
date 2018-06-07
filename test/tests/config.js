@@ -19,14 +19,30 @@ test('lib/config', module, () => {
   });
 
   it(`distill() plugins`, () => {
-    const result = distill({}, { plugins: [] }, { plugins: [1] });
+    let result = distill({}, {}, { plugins: [1] });
+    expect(result).toMatchSnapshot();
+
+    result = distill({}, { plugins: [] }, { plugins: [1] });
+    expect(result).toMatchSnapshot();
+
+    result = distill({}, { plugins: [1] }, { plugins: [1] });
     expect(result).toMatchSnapshot();
   });
 
   it(`distill() plugins from config array`, () => {
     const conf = [].concat(config);
+    let result = distill({}, conf, { plugins: [1] });
+
+    expect(result).toMatchSnapshot();
+
     conf[0].plugins = [];
-    const result = distill({}, conf, { plugins: [1] });
+    result = distill({}, conf, { plugins: [1] });
+
+    expect(result).toMatchSnapshot();
+
+    conf[1].plugins = [1];
+    result = distill({}, conf, { plugins: [1] });
+
     expect(result).toMatchSnapshot();
   });
 

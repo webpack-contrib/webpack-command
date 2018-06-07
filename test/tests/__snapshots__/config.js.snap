@@ -18,12 +18,32 @@ Object {
   "entry": "<PROJECT_ROOT>/common/entry-b.js",
   "mode": "development",
   "name": "test",
+  "plugins": Array [
+    1,
+  ],
 }
 `;
 
 exports[`lib/config > distill() plugins #0 1`] = `
 Object {
   "plugins": Array [
+    1,
+  ],
+}
+`;
+
+exports[`lib/config > distill() plugins #1 1`] = `
+Object {
+  "plugins": Array [
+    1,
+  ],
+}
+`;
+
+exports[`lib/config > distill() plugins #2 1`] = `
+Object {
+  "plugins": Array [
+    1,
     1,
   ],
 }
@@ -42,6 +62,45 @@ Array [
     "entry": "<PROJECT_ROOT>/common/entry-b.js",
     "mode": "development",
     "plugins": Array [
+      1,
+    ],
+  },
+]
+`;
+
+exports[`lib/config > distill() plugins from config array #1 1`] = `
+Array [
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
+    ],
+  },
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-b.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
+    ],
+  },
+]
+`;
+
+exports[`lib/config > distill() plugins from config array #2 1`] = `
+Array [
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
+    ],
+  },
+  Object {
+    "entry": "<PROJECT_ROOT>/common/entry-b.js",
+    "mode": "development",
+    "plugins": Array [
+      1,
       1,
     ],
   },
