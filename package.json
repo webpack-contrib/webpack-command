@@ -10,7 +10,7 @@
   "bin": {
     "webpack": "lib/cli.js"
   },
-  "main": "lib/index.js",
+  "main": "lib/cli.js",
   "engines": {
     "node": ">= 6.9.0 <7.0.0 || >= 8.9.0"
   },
