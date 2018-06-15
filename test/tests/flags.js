@@ -2,6 +2,8 @@ const { test } = require('../util');
 const flags = require('../../lib/flags');
 const { validateFlags } = require('../../lib/flags/util');
 
+const config = require('../fixtures/common/webpack.config.js');
+
 test('lib/flags', module, () => {
   it(`should display help`, () => {
     const result = flags.help();
@@ -15,6 +17,16 @@ test('lib/flags', module, () => {
 
   it('should parse flags cleanly', () => {
     const result = flags.apply({}, {});
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should parse compound flags: --run-dev', () => {
+    const result = flags.apply({ runDev: true }, config);
+    expect(result).toMatchSnapshot();
+  });
+
+  it('should parse compound flags: --run-prod', () => {
+    const result = flags.apply({ runProd: true }, config);
     expect(result).toMatchSnapshot();
   });
 });
