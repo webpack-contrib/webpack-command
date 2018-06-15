@@ -49,7 +49,7 @@ function nameTest(test) {
 function match(received) {
   const { file } = current;
   const snapshotState = new SnapshotState(file, {
-    updateSnapshot: argv.update ? 'all' : 'new',
+    updateSnapshot: argv.update || argv.u ? 'all' : 'new',
   });
   const matcher = toMatchSnapshot.bind({
     snapshotState,

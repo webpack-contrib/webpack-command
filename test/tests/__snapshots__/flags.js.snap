@@ -150,6 +150,58 @@ exports[`lib/flags > should display help #1 1`] = `
 "
 `;
 
+exports[`lib/flags > should parse compound flags: --run-dev #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "devtool": "eval-cheap-module-source-map",
+  "mode": "development",
+  "output": Object {
+    "pathinfo": true,
+  },
+  "plugins": Array [
+    LoaderOptionsPlugin {
+      "options": Object {
+        "debug": true,
+        "test": Object {
+          "test": [Function],
+        },
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
+exports[`lib/flags > should parse compound flags: --run-prod #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "mode": "production",
+  "output": Object {},
+  "plugins": Array [
+    LoaderOptionsPlugin {
+      "options": Object {
+        "minimize": true,
+        "test": Object {
+          "test": [Function],
+        },
+      },
+    },
+    DefinePlugin {
+      "definitions": Object {
+        "process.env.NODE_ENV": "production",
+      },
+    },
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "<PROJECT_ROOT>/test/fixtures/common/test-reporter.js",
+}
+`;
+
 exports[`lib/flags > should parse flags cleanly #0 1`] = `
 Object {
   "context": "<PROJECT_ROOT>",
