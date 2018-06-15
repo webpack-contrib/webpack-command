@@ -15,15 +15,18 @@ exports[`lib/flags > should display help #0 1`] = `
   --reporter                    Specifies the reporter to use for generating console output for a build
   --require                     Preload one or more modules before loading the webpack configuration
                                 Typically used for language-specific require hooks
-  --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map --output-pathinfo
-  --run-prod                    An alias for --optimize-minimize --define process.env.NODE_ENV=\\"production\\"
+  --run-dev                     An alias for --debug --devtool eval-cheap-module-source-map
+                                --mode development --output-pathinfo
+  --run-prod                    An alias for --optimize-minimize --mode production, and defines
+                                process.env.NODE_ENV=\\"production\\"
   --version                     Display the webpack-command version
   --watch                       Watch the filesystem for changes
 
 [4mAdvanced[24m
   --bail                        Abort the compilation on first error
   --cache                       Enable in memory caching
-  --define                      Define any free var in the bundle
+  --define                      Used to redefine or replace a variable or key in the bundle. Complex
+                                keys should be set in config. {dim e.g. --define.batman robin}
   --hot                         Enables Hot Module Replacement
   --plugin                      Load this plugin
   --prefetch                    Prefetch this request
