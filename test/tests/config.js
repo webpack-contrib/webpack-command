@@ -1,5 +1,6 @@
 const { test } = require('../util');
 const { distill } = require('../../lib/config');
+const { apply } = require('../../lib/flags');
 
 const config = [
   {
@@ -16,6 +17,20 @@ test('lib/config', module, () => {
   it(`distill()`, () => {
     const result = distill({}, config, {});
     expect(result).toMatchSnapshot();
+  });
+
+  it(`distill() context`, () => {
+    const argv = {};
+    const options = apply({}, {});
+
+    let result = distill(argv, { context: 'batman' }, { context: 'superman' });
+    expect(result.context).toBe('superman');
+
+    result = distill(argv, { context: 'batman' }, options);
+    expect(result.context).toBe('batman');
+
+    result = distill(argv, {}, options);
+    expect(result.context).toBe(process.cwd());
   });
 
   it(`distill() plugins`, () => {

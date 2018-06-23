@@ -2,7 +2,6 @@
 
 exports[`StylishReporter > problems/stylish-problems reporter should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems/entry-problems.js",
   "mode": "development",
   "plugins": Array [
@@ -46,7 +45,6 @@ webpack v4.6.0
 
 exports[`StylishReporter > stylish reporter should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -75,7 +73,6 @@ webpack v4.6.0
 exports[`StylishReporter > stylish-multi reporter should apply #0 1`] = `
 Array [
   Object {
-    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
     "mode": "development",
     "plugins": Array [
@@ -85,7 +82,6 @@ Array [
     ],
   },
   Object {
-    "context": "<PROJECT_ROOT>",
     "entry": Array [
       "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
       "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",

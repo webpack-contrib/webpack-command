@@ -2,7 +2,6 @@
 
 exports[`Flags > --run-dev > should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "devtool": "eval-cheap-module-source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
@@ -35,7 +34,6 @@ exports[`Flags > --run-dev > should build #1 1`] = `"1f4895c0"`;
 
 exports[`Flags > --run-prod > should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
