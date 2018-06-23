@@ -63,17 +63,17 @@ test('StylishReporter', module, () => {
 
     let config;
 
-    it(`${name} reporter should validate`, () => {
+    it(`${name}: reporter should validate`, () => {
       expect(validate(opts)).toEqual(true);
     });
 
-    it(`${name} reporter should apply`, () => {
+    it(`${name}: reporter should apply`, () => {
       config = apply(opts);
 
       expect(config).toMatchSnapshot();
     });
 
-    it(`${name} reporter should build`, () =>
+    it(`${name}: reporter should build`, () =>
       build(config).then((result) => {
         expect(
           strip(result)
@@ -81,6 +81,40 @@ test('StylishReporter', module, () => {
             .replace(/\d+\.\d+ (KiB|kB)/g, '<size>')
             .replace(/[a-f0-9]{20}/g, '<hash>')
         ).toMatchSnapshot();
+      }));
+  }
+});
+
+test('JsonReporter', module, () => {
+  for (const name of ['json', 'json-multi', 'problems/problems']) {
+    const fixture = `json/${name}`;
+    const fixtureType = 'reporters';
+    const opts = { fixture, fixtureType };
+
+    let config;
+
+    it(`${name}: reporter should validate`, () => {
+      expect(validate(opts)).toEqual(true);
+    });
+
+    it(`${name}: reporter should apply`, () => {
+      config = apply(opts);
+
+      expect(config).toMatchSnapshot();
+    });
+
+    it(`${name}: reporter should build`, () =>
+      build(config).then((result) => {
+        expect(result.length).toBeGreaterThan(0);
+
+        const json = JSON.parse(result);
+
+        expect(Object.keys(json).length).toBeGreaterThan(0);
+
+        if (name === 'problems/problems') {
+          expect(json.errors.length).toBeGreaterThan(0);
+          expect(json.warnings.length).toBeGreaterThan(0);
+        }
       }));
   }
 });
