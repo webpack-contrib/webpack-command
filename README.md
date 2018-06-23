@@ -13,7 +13,7 @@
 
 # webpack-command
 
-🔳 A proof-of-concept for a lightweight, modular, and opinionated webpack CLI.
+🔳 A lightweight, modular, and opinionated webpack CLI.
 
 For users coming from `webpack-cli`, please read about
 [the differences](#differences-with-webpack-cli) between this module and
