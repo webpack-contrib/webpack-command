@@ -9,6 +9,7 @@
   "bugs": "https://github.com/webpack-contrib/webpack-command/issues",
   "bin": {
     "webpack": "lib/cli.js",
+    "webpack-command": "lib/cli.js",
     "wp": "lib/cli.js"
   },
   "main": "lib/index.js",
