@@ -26,7 +26,7 @@ configuration
 
 exports[`Commands > should show cli help #0 1`] = `
 "
-  🐕 A lightweight, modular, and opinionated webpack CLI
+  A superior CLI experience for webpack. Lightweight, modular, and opinionated.
 
   Usage
     $ webpack [<config>, ...options]
