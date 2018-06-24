@@ -27,7 +27,7 @@
     "release:ci": "conventional-github-releaser -p angular",
     "release:validate": "commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)",
     "security": "nsp check",
-    "test": "npm run prepublishOnly && mocha test/test.js --check-leaks --exit",
+    "test": "npm run prepublishOnly && mocha test/test.js --exit",
     "test:coverage": "mkdir -p coverage && nyc --silent npm test && npm run test:coverage:report",
     "test:coverage:report": "nyc report --reporter=lcov --reporter=text-lcov --reporter=json --reporter=clover > coverage/lcov.info",
     "ci:lint": "npm run lint && npm run security",

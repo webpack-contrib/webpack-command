@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`JsonReporter > json: reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "json",
+}
+`;
+
+exports[`JsonReporter > json-multi: reporter should apply #0 1`] = `
+Array [
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+    "reporter": "json",
+  },
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": Array [
+      "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+      "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+    ],
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+    "reporter": "json",
+  },
+]
+`;
+
+exports[`JsonReporter > problems/problems: reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/reporters/json/problems/entry-problems.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "json",
+}
+`;
+
 exports[`StylishReporter > problems/stylish-problems reporter should apply #0 1`] = `
 Object {
   "entry": "<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems/entry-problems.js",
@@ -43,6 +101,50 @@ webpack v4.6.0
 ✖ 3 problems (2 errors, 1 warning)"
 `;
 
+exports[`StylishReporter > problems/stylish-problems: reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems/entry-problems.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+}
+`;
+
+exports[`StylishReporter > problems/stylish-problems: reporter should build #0 1`] = `
+"
+webpack v4.6.0
+
+<hash>
+  size     name                     module                                                        status
+  160 B    problems sync recursive  ./test/fixtures/reporters/stylish/problems sync               built
+  148 B    entry-problems.js        ./test/fixtures/reporters/stylish/problems/entry-problems.js  built ⚠ ✖
+  177 B    image.jpg                ./test/fixtures/reporters/stylish/problems/image.jpg          built failed ✖
+
+  size     name                     asset                                                         status
+  <size>  main                     main.js                                                       emitted
+
+  <duration> 
+
+
+./test/fixtures/reporters/stylish/problems/entry-problems.js
+  5:15  error    Module not found: Error: Can't resolve 'test' in
+                 '<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems'
+  2:12  warning  Critical dependency: require function is used in a way in which
+                 dependencies cannot be statically extracted
+
+./test/fixtures/reporters/stylish/problems/image.jpg
+  1:0  error  Module parse failed: Unexpected character '�' You may need an
+              appropriate loader to handle this file type. (Source code omitted for
+              this binary file)  @
+              ./test/fixtures/reporters/stylish/problems/entry-problems.js 7:0-22
+
+✖ 3 problems (2 errors, 1 warning)"
+`;
+
 exports[`StylishReporter > stylish reporter should apply #0 1`] = `
 Object {
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
@@ -56,6 +158,34 @@ Object {
 `;
 
 exports[`StylishReporter > stylish reporter should build #0 1`] = `
+"
+webpack v4.6.0
+
+<hash>
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  <size>  main        main.js                            emitted
+
+  <duration> 
+"
+`;
+
+exports[`StylishReporter > stylish: reporter should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+}
+`;
+
+exports[`StylishReporter > stylish: reporter should build #0 1`] = `
 "
 webpack v4.6.0
 
@@ -121,6 +251,90 @@ webpack v4.6.0
   <duration> 
 
 total <duration>"
+`;
+
+exports[`StylishReporter > stylish-multi: reporter should apply #0 1`] = `
+Array [
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+  },
+  Object {
+    "context": "<PROJECT_ROOT>",
+    "entry": Array [
+      "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
+      "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",
+    ],
+    "mode": "development",
+    "plugins": Array [
+      NamedModulesPlugin {
+        "options": Object {},
+      },
+    ],
+  },
+]
+`;
+
+exports[`StylishReporter > stylish-multi: reporter should build #0 1`] = `
+"
+webpack v4.6.0
+
+<hash>
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  <size>  main        main.js                            emitted
+
+  <duration> 
+
+<hash>
+  size     name        module                                                                     status
+  41 B     entry-b.js  ./test/fixtures/common/entry-b.js                                          built
+  41 B     entry-c.js  ./test/fixtures/common/entry-c.js                                          built
+  40 B     0           multi ./test/fixtures/common/entry-b.js ./test/fixtures/common/entry-c.js  built
+
+  size     name        asset                                                                      status
+  <size>  main        main.js                                                                    emitted
+
+  <duration> 
+
+total <duration>"
+`;
+
+exports[`bad reporter name > should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "batman",
+}
+`;
+
+exports[`bad reporter name > should default to stylish #0 1`] = `
+"
+webpack v4.6.0
+
+<hash>
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  <size>  main        main.js                            emitted
+
+  <duration> 
+"
 `;
 
 exports[`reporter parse util > should parse hidden #0 1`] = `"(1 asset, 2 modules hidden)"`;
