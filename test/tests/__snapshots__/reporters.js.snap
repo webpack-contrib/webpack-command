@@ -312,6 +312,35 @@ webpack v4.6.0
 total <duration>"
 `;
 
+exports[`bad reporter name > should apply #0 1`] = `
+Object {
+  "context": "<PROJECT_ROOT>",
+  "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
+  "mode": "development",
+  "plugins": Array [
+    NamedModulesPlugin {
+      "options": Object {},
+    },
+  ],
+  "reporter": "batman",
+}
+`;
+
+exports[`bad reporter name > should default to stylish #0 1`] = `
+"
+webpack v4.6.0
+
+<hash>
+  size     name        module                             status
+  41 B     entry-a.js  ./test/fixtures/common/entry-a.js  built
+
+  size     name        asset                              status
+  <size>  main        main.js                            emitted
+
+  <duration> 
+"
+`;
+
 exports[`reporter parse util > should parse hidden #0 1`] = `"(1 asset, 2 modules hidden)"`;
 
 exports[`reporter parse util > should parse status: cacheable #0 1`] = `

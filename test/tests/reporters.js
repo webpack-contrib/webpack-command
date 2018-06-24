@@ -118,3 +118,28 @@ test('JsonReporter', module, () => {
       }));
   }
 });
+
+test('bad reporter name', module, () => {
+  const fixture = `json/json`;
+  const fixtureType = 'reporters';
+  const opts = { fixture, fixtureType };
+
+  let config;
+
+  it(`should apply`, () => {
+    config = apply(opts);
+    config.reporter = 'batman';
+    expect(config).toMatchSnapshot();
+  });
+
+  it(`should default to stylish`, () =>
+    build(config).then((result) => {
+      expect(result.length).toBeGreaterThan(0);
+      expect(
+        strip(result)
+          .replace(/Δt \d+ms/g, '<duration>')
+          .replace(/\d+\.\d+ (KiB|kB)/g, '<size>')
+          .replace(/[a-f0-9]{20}/g, '<hash>')
+      ).toMatchSnapshot();
+    }));
+});
