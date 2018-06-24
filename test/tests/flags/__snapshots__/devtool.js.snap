@@ -2,7 +2,6 @@
 
 exports[`Flags > --devtool > should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "devtool": "cheap-source-map",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",

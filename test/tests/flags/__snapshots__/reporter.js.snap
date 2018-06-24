@@ -2,7 +2,6 @@
 
 exports[`Flags > --reporter > basic reporter should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [
@@ -32,7 +31,6 @@ exports[`Flags > --reporter > basic reporter should build #1 1`] = `"bf58edd8"`;
 exports[`Flags > --reporter > basic-multi reporter should apply #0 1`] = `
 Array [
   Object {
-    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
     "mode": "development",
     "plugins": Array [
@@ -43,7 +41,6 @@ Array [
     "reporter": "basic",
   },
   Object {
-    "context": "<PROJECT_ROOT>",
     "entry": Array [
       "<PROJECT_ROOT>/test/fixtures/common/entry-b.js",
       "<PROJECT_ROOT>/test/fixtures/common/entry-c.js",

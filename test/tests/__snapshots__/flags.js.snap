@@ -155,7 +155,6 @@ exports[`lib/flags > should display help #1 1`] = `
 
 exports[`lib/flags > should parse compound flags: --run-dev #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "devtool": "eval-cheap-module-source-map",
   "mode": "development",
   "output": Object {
@@ -180,7 +179,6 @@ Object {
 
 exports[`lib/flags > should parse compound flags: --run-prod #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "mode": "production",
   "output": Object {},
   "plugins": Array [
@@ -207,7 +205,6 @@ Object {
 
 exports[`lib/flags > should parse flags cleanly #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "output": Object {},
 }
 `;

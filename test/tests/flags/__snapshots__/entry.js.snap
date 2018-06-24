@@ -2,7 +2,6 @@
 
 exports[`Flags > --entry > multi should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": Object {
     "main": Array [
       "./test/fixtures/common/entry-a.js",

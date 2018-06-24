@@ -2,7 +2,6 @@
 
 exports[`Flags > --debug > should apply #0 1`] = `
 Object {
-  "context": "<PROJECT_ROOT>",
   "entry": "<PROJECT_ROOT>/test/fixtures/common/entry-a.js",
   "mode": "development",
   "plugins": Array [

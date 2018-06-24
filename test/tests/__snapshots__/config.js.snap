@@ -3,10 +3,12 @@
 exports[`lib/config > distill() #0 1`] = `
 Array [
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-a.js",
     "mode": "development",
   },
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-b.js",
     "mode": "development",
   },
@@ -26,6 +28,7 @@ Object {
 
 exports[`lib/config > distill() plugins #0 1`] = `
 Object {
+  "context": "<PROJECT_ROOT>",
   "plugins": Array [
     1,
   ],
@@ -34,6 +37,7 @@ Object {
 
 exports[`lib/config > distill() plugins #1 1`] = `
 Object {
+  "context": "<PROJECT_ROOT>",
   "plugins": Array [
     1,
   ],
@@ -42,6 +46,7 @@ Object {
 
 exports[`lib/config > distill() plugins #2 1`] = `
 Object {
+  "context": "<PROJECT_ROOT>",
   "plugins": Array [
     1,
     1,
@@ -52,6 +57,7 @@ Object {
 exports[`lib/config > distill() plugins from config array #0 1`] = `
 Array [
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-a.js",
     "mode": "development",
     "plugins": Array [
@@ -59,6 +65,7 @@ Array [
     ],
   },
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-b.js",
     "mode": "development",
     "plugins": Array [
@@ -71,6 +78,7 @@ Array [
 exports[`lib/config > distill() plugins from config array #1 1`] = `
 Array [
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-a.js",
     "mode": "development",
     "plugins": Array [
@@ -78,6 +86,7 @@ Array [
     ],
   },
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-b.js",
     "mode": "development",
     "plugins": Array [
@@ -90,6 +99,7 @@ Array [
 exports[`lib/config > distill() plugins from config array #2 1`] = `
 Array [
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-a.js",
     "mode": "development",
     "plugins": Array [
@@ -97,6 +107,7 @@ Array [
     ],
   },
   Object {
+    "context": "<PROJECT_ROOT>",
     "entry": "<PROJECT_ROOT>/common/entry-b.js",
     "mode": "development",
     "plugins": Array [
