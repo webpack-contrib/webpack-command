@@ -8,6 +8,7 @@
 [![node][node]][node-url]
 [![deps][deps]][deps-url]
 [![tests][tests]][tests-url]
+[![coverage][cover]][cover-url]
 [![chat][chat]][chat-url]
 [![size][size]][size-url]
 
@@ -32,8 +33,9 @@ please `npm uninstall webpack-cli` first.
 `webpack-command` has many advantages over other CLI experiences for `webpack`.
 These include:
 
-- A full test suite with 190 tests and 95% coverage (so close to 100% 💪)
-- A 93% smaller package cost versus `webpack-cli`
+- A full test suite with 220 tests and 95% coverage (so close to 100% 💪)
+- A ~~93%~~ 24% smaller package cost versus `webpack-cli` (it used to be 93%,
+  they got wise after _webpack-command_ was released)
 - Highly focused on the User Experience and detail
 - Validation of commands, entries, and flags before further execution
 - Extensible third-party commands. Include only what you need!
@@ -58,10 +60,14 @@ $ npm install webpack-command --save-dev
 
 ## CLI
 
-```console
-$ webpack --help
+The primary binary for webpack-command is `wp` (because who doesn't like to save
+keystrokes!?) Although, you may also use the `webpack` binary as per usual if
+your setup installs this module _after_ webpack, and the two don't conflict.
 
-  🐕 A lightweight, modular, and opinionated webpack CLI
+```console
+$ wp --help
+
+  A superior CLI experience for webpack. Lightweight, modular, and opinionated.
 
   Usage
     $ webpack [<config>, ...options]
@@ -150,6 +156,9 @@ $ webpack --help
 
     Type `webpack help <command>` for more information
 ```
+
+As a convenience for alternative package managers, the `webpack-command` binary
+is also installed with this package.
 
 ## Commands
 
