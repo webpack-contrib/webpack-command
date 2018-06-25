@@ -79,4 +79,23 @@ test('Commands', module, () => {
       strip(result.stdout).replace(/Δt \d+ms/g, '<duration>')
     ).toMatchSnapshot();
   }).timeout(4000);
+
+  it('should accept custom reporters relative to the current working directory', () => {
+    const cliPath = resolve(__dirname, '../../lib/cli.js');
+    const srcPath = resolve(__dirname, '../../test/fixtures/flags/config/src');
+    const result = execa.sync(
+      cliPath,
+      ['--reporter', '../../lib/reporters/BasicReporter', srcPath],
+      {
+        cwd: __dirname,
+      }
+    );
+
+    expect(
+      strip(result.stdout)
+        .replace(/Version: webpack \d\.\d\.\d/, '<version>')
+        .replace(/Time: \d+ms/g, '<duration>')
+        .replace(/Built at: .+(?=\n)/g, '<datetime>')
+    ).toMatchSnapshot();
+  }).timeout(4000);
 });
