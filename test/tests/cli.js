@@ -93,9 +93,11 @@ test('Commands', module, () => {
 
     expect(
       strip(result.stdout)
-        .replace(/Version: webpack \d\.\d\.\d/, '<version>')
+        .replace(/Version: webpack \d+\.\d+\.\d+/, '<version>')
         .replace(/Time: \d+ms/g, '<duration>')
         .replace(/Built at: .+(?=\n)/g, '<datetime>')
+        .replace(/[a-f0-9]{20}/g, '<hash>')
+        .replace(/\d+ bytes/g, '<size>')
     ).toMatchSnapshot();
   }).timeout(4000);
 });
