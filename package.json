@@ -1,6 +1,6 @@
 {
   "name": "webpack-command",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A superior CLI experience for webpack. Lightweight, modular, and opinionated.",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-command",
