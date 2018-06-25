@@ -20,9 +20,9 @@ Object {
 `;
 
 exports[`Flags > --hot > should build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  27.6 KiB    main  [emitted]  main
+main.js  28.9 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;

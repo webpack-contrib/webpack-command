@@ -24,9 +24,9 @@ Object {
 `;
 
 exports[`Flags > --define > should build #0 1`] = `
-"Version: webpack 4.6.0
-  Asset      Size  Chunks             Chunk Names
-main.js  3.04 KiB    main  [emitted]  main
+"Version: webpack 4.12.1
+  Asset   Size  Chunks             Chunk Names
+main.js  4 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/flags/define/entry.js] 91 bytes {main} [built]"
 `;

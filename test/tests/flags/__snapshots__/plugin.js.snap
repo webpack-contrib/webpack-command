@@ -15,13 +15,15 @@ Object {
         "sourceMap": false,
         "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
         "uglifyOptions": Object {
+          "compress": Object {
+            "inline": 1,
+          },
           "output": Object {
             "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
           },
         },
         "warningsFilter": [Function],
       },
-      "sourceMapsCache": WeakMap {},
     },
     NamedModulesPlugin {
       "options": Object {},
@@ -32,11 +34,11 @@ Object {
 `;
 
 exports[`Flags > --plugin > should build #0 1`] = `
-"Version: webpack 4.6.0
-  Asset       Size  Chunks             Chunk Names
-main.js  912 bytes    main  [emitted]  main
+"Version: webpack 4.12.1
+  Asset      Size  Chunks             Chunk Names
+main.js  1.27 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --plugin > should build #1 1`] = `"83723963"`;
+exports[`Flags > --plugin > should build #1 1`] = `"406b140a"`;

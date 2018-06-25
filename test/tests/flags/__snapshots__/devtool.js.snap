@@ -15,14 +15,14 @@ Object {
 `;
 
 exports[`Flags > --devtool > should build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
       Asset      Size  Chunks             Chunk Names
-    main.js  2.92 KiB    main  [emitted]  main
-main.js.map  2.64 KiB    main  [emitted]  main
+    main.js  3.88 KiB    main  [emitted]  main
+main.js.map  3.59 KiB    main  [emitted]  main
 Entrypoint main = main.js main.js.map
 [./test/fixtures/common/entry-a.js] 41 bytes {main} [built]"
 `;
 
-exports[`Flags > --devtool > should build #1 1`] = `"f349b18e"`;
+exports[`Flags > --devtool > should build #1 1`] = `"dc2cf76c"`;
 
-exports[`Flags > --devtool > should build #2 1`] = `"195aef37"`;
+exports[`Flags > --devtool > should build #2 1`] = `"dccd936"`;

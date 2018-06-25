@@ -23,14 +23,14 @@ Object {
 `;
 
 exports[`Flags > --module-bind > should bind and build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  2.97 KiB    main  [emitted]  main
+main.js  3.93 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 49 bytes {main} [built]"
 `;
 
-exports[`Flags > --module-bind > should bind and build #1 1`] = `"7d13f958"`;
+exports[`Flags > --module-bind > should bind and build #1 1`] = `"7cd38dd8"`;
 
 exports[`Flags > --module-bind-all > should apply #0 1`] = `
 Object {
@@ -65,14 +65,14 @@ Object {
 `;
 
 exports[`Flags > --module-bind-all > should bind and build #0 1`] = `
-"Version: webpack 4.6.0
-  Asset   Size  Chunks             Chunk Names
-main.js  3 KiB    main  [emitted]  main
+"Version: webpack 4.12.1
+  Asset      Size  Chunks             Chunk Names
+main.js  3.96 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 78 bytes {main} [built]"
 `;
 
-exports[`Flags > --module-bind-all > should bind and build #1 1`] = `"bc18d981"`;
+exports[`Flags > --module-bind-all > should bind and build #1 1`] = `"4038280e"`;
 
 exports[`Flags > --module-bind-post > should apply #0 1`] = `
 Object {
@@ -97,14 +97,14 @@ Object {
 `;
 
 exports[`Flags > --module-bind-post > should bind and build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  2.98 KiB    main  [emitted]  main
+main.js  3.94 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 60 bytes {main} [built]"
 `;
 
-exports[`Flags > --module-bind-post > should bind and build #1 1`] = `"c2baf8bb"`;
+exports[`Flags > --module-bind-post > should bind and build #1 1`] = `"8342acc8"`;
 
 exports[`Flags > --module-bind-pre > should apply #0 1`] = `
 Object {
@@ -129,11 +129,11 @@ Object {
 `;
 
 exports[`Flags > --module-bind-pre > should bind and build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  2.98 KiB    main  [emitted]  main
+main.js  3.94 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/common/entry-a.js] 59 bytes {main} [built]"
 `;
 
-exports[`Flags > --module-bind-pre > should bind and build #1 1`] = `"f9b24195"`;
+exports[`Flags > --module-bind-pre > should bind and build #1 1`] = `"59c523e"`;

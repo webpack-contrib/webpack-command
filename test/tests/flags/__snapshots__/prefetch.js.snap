@@ -17,12 +17,12 @@ Object {
 `;
 
 exports[`Flags > --prefetch > should build #0 1`] = `
-"Version: webpack 4.6.0
-  Asset     Size  Chunks             Chunk Names
-main.js  3.6 KiB    main  [emitted]  main
+"Version: webpack 4.12.1
+  Asset      Size  Chunks             Chunk Names
+main.js  4.56 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/flags/prefetch/dependency.js] 53 bytes {main} [built] [prefetched]
 [./test/fixtures/flags/prefetch/entry.js] 119 bytes {main} [built]"
 `;
 
-exports[`Flags > --prefetch > should build #1 1`] = `"54ba4ab9"`;
+exports[`Flags > --prefetch > should build #1 1`] = `"9933bca7"`;

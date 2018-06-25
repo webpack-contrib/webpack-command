@@ -4,14 +4,14 @@ exports[`Commands > should add directories to entries #0 1`] = `
 "ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
-webpack v4.6.0
+webpack v4.12.1
 
-953ce188d35af8c002f0
+9a596dacea06b65d858a
   size   name  module                                     status
   43 B   0     ./test/fixtures/flags/config/src/index.js  built
 
   size   name  asset                                      status
-  573 B  main  main.js                                    emitted
+  958 B  main  main.js                                    emitted
 
   <duration> 
 
@@ -151,14 +151,14 @@ exports[`Zero Config > should run #0 1`] = `
 "ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
-webpack <version>
+webpack v4.12.1
 
-953ce188d35af8c002f0
+9a596dacea06b65d858a
   size   name  module          status
   43 B   0     ./src/index.js  built
 
   size   name  asset           status
-  573 B  main  main.js         emitted
+  958 B  main  main.js         emitted
 
   <duration> 
 

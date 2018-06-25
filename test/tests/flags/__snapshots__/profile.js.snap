@@ -14,4 +14,4 @@ Object {
 }
 `;
 
-exports[`Flags > --profile > should build #0 1`] = `"bf58edd8"`;
+exports[`Flags > --profile > should build #0 1`] = `"1c77bf93"`;

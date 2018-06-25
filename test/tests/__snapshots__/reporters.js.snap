@@ -111,31 +111,33 @@ Object {
 
 exports[`StylishReporter > problems/stylish-problems: reporter should build #0 1`] = `
 "
-webpack v4.6.0
+webpack v4.12.1
 
 <hash>
-  size     name                     module                                                        status
-  160 B    problems sync recursive  ./test/fixtures/reporters/stylish/problems sync               built
-  148 B    entry-problems.js        ./test/fixtures/reporters/stylish/problems/entry-problems.js  built ⚠ ✖
-  177 B    image.jpg                ./test/fixtures/reporters/stylish/problems/image.jpg          built failed ✖
+  size   name                     module                                                        status
+  160 B  problems sync recursive  ./test/fixtures/reporters/stylish/problems sync               built
+  148 B  entry-problems.js        ./test/fixtures/reporters/stylish/problems/entry-problems.js  built ✖
+  177 B  image.jpg                ./test/fixtures/reporters/stylish/problems/image.jpg          built failed ✖
 
-  size     name                     asset                                                         status
-  <size>  main                     main.js                                                       emitted
+  size   name                     asset                                                         status
+  6 kB   main                     main.js                                                       emitted
 
   <duration> 
 
 
 ./test/fixtures/reporters/stylish/problems/entry-problems.js
-  5:15  error    Module not found: Error: Can't resolve 'test' in
-                 '<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems'
-  2:12  warning  Critical dependency: require function is used in a way in which
-                 dependencies cannot be statically extracted
+  5:15  error  Module not found: Error: Can't resolve 'test' in
+               '<PROJECT_ROOT>/test/fixtures/reporters/stylish/problems'
 
-./test/fixtures/reporters/stylish/problems/image.jpg
+./test/fixtures/reporters/stylish/problems/image.jpg 1:0
   1:0  error  Module parse failed: Unexpected character '�' You may need an
               appropriate loader to handle this file type. (Source code omitted for
               this binary file)  @
               ./test/fixtures/reporters/stylish/problems/entry-problems.js 7:0-22
+
+./test/fixtures/reporters/stylish/problems/entry-problems.js 2:12-19
+  0:0  warning  Critical dependency: require function is used in a way in which
+                dependencies cannot be statically extracted
 
 ✖ 3 problems (2 errors, 1 warning)"
 `;
@@ -181,7 +183,7 @@ Object {
 
 exports[`StylishReporter > stylish: reporter should build #0 1`] = `
 "
-webpack v4.6.0
+webpack v4.12.1
 
 <hash>
   size     name        module                             status
@@ -275,7 +277,7 @@ Array [
 
 exports[`StylishReporter > stylish-multi: reporter should build #0 1`] = `
 "
-webpack v4.6.0
+webpack v4.12.1
 
 <hash>
   size     name        module                             status
@@ -315,7 +317,7 @@ Object {
 
 exports[`bad reporter name > should default to stylish #0 1`] = `
 "
-webpack v4.6.0
+webpack v4.12.1
 
 <hash>
   size     name        module                             status

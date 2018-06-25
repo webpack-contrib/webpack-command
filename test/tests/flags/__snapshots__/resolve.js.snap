@@ -19,15 +19,15 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-alias reporter should build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  3.64 KiB    main  [emitted]  main
+main.js  4.61 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/flags/resolve/aliased/dependency.js] 39 bytes {main} [built]
 [./test/fixtures/flags/resolve/entry.js] 150 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-alias reporter should build #1 1`] = `"2daf8057"`;
+exports[`Flags > --resolve-* > resolve-alias reporter should build #1 1`] = `"23f35c9e"`;
 
 exports[`Flags > --resolve-* > resolve-extensions reporter should apply #0 1`] = `
 Object {
@@ -48,15 +48,15 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-extensions reporter should build #0 1`] = `
-"Version: webpack 4.6.0
+"Version: webpack 4.12.1
   Asset      Size  Chunks             Chunk Names
-main.js  3.68 KiB    main  [emitted]  main
+main.js  4.64 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./test/fixtures/flags/resolve/dependency.custom] 38 bytes {main} [built]
 [./test/fixtures/flags/resolve/entry-extensions.js] 144 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-extensions reporter should build #1 1`] = `"ca182ef7"`;
+exports[`Flags > --resolve-* > resolve-extensions reporter should build #1 1`] = `"4ae3815"`;
 
 exports[`Flags > --resolve-* > resolve-loader-alias reporter should apply #0 1`] = `
 Object {
@@ -73,9 +73,9 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #0 1`] = `
-"Version: webpack 4.6.0
-  Asset    Size  Chunks             Chunk Names
-main.js  17 KiB    main  [emitted]  main
+"Version: webpack 4.12.1
+  Asset      Size  Chunks             Chunk Names
+main.js  17.9 KiB    main  [emitted]  main
 Entrypoint main = main.js
 [./node_modules/path-browserify/index.js] 6.04 KiB {main} [built]
 [./node_modules/process/browser.js] 5.29 KiB {main} [built]
@@ -83,4 +83,4 @@ Entrypoint main = main.js
 [./test/fixtures/flags/resolve/entry-loader-alias.js] 283 bytes {main} [built]"
 `;
 
-exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #1 1`] = `"bc875688"`;
+exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #1 1`] = `"9a21ea9e"`;
