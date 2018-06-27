@@ -192,7 +192,7 @@ Object {
     },
     DefinePlugin {
       "definitions": Object {
-        "process.env.NODE_ENV": "production",
+        "process.env.NODE_ENV": "\\"production\\"",
       },
     },
     NamedModulesPlugin {
