@@ -33,20 +33,23 @@ please `npm uninstall webpack-cli` first.
 `webpack-command` has many advantages over other CLI experiences for `webpack`.
 These include:
 
+- [Extendable Webpack Configurations](#extendable-webpack-configurations). A
+configuration file can extend the properties and collections from base
+configurations, and are filtered intelligently.
+- Custom Reporters 🤯
+- A beautiful default user experience with output driven by
+[`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish)
+- Support for `webpack` configuration in any language or compiler that provides
+a `require` hook
+- Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`
+- Validation of commands, entries, and flags before further execution
+- Extensible third-party commands. Include only what you need!
 - A full test suite with 220 tests and 95% coverage (so close to 100% 💪)
 - A ~~93%~~ 24% smaller package cost versus `webpack-cli` (it used to be 93%,
   they got wise after _webpack-command_ was released)
 - Highly focused on the User Experience and detail
-- Validation of commands, entries, and flags before further execution
-- Extensible third-party commands. Include only what you need!
-- A beautiful default user experience with output driven by
-[`webpack-stylish`](https://www.npmjs.com/package/webpack-stylish)
-- Custom Reporters 🤯
-- Support for `webpack` configuration in any language or compiler that provides
-a `require` hook
-- Support for `webpack` configuration in `JSON`, `YAML`, or `JavaScript`
 
-And last, but not least, Did-You-Mean suggestions for flags:
+And last but not least, Did-You-Mean suggestions for flags:
 
 <img width="427" src="https://raw.githubusercontent.com/webpack-contrib/webpack-command/master/assets/did-you-mean.png" alt="did you mean">
 
@@ -159,6 +162,42 @@ $ wp --help
 
 As a convenience for alternative package managers, the `webpack-command` binary
 is also installed with this package.
+
+## Extendable Webpack Configurations
+
+This module supports extending webpack configuration files with
+[ESLint-style](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)
+`extends` functionality. This feature allows users to create a "base" config and
+in essence, "inherit" from that base config in a separate config. A bare-bones
+example:
+
+```js
+// base.config.js
+module.exports = {
+  name: 'base',
+  mode: 'development',
+  plugins: [...]
+}
+```
+
+```js
+// webpack.config.js
+module.exports = {
+  extends: path.join(..., 'base-config.js'),
+  name: 'dev'
+```
+
+The resulting configuration object would resemble:
+
+```js
+{
+  name: 'dev',
+  mode: 'development',
+  plugins: [...]
+}
+```
+
+[Read More about Extending Configuration Files](https://github.com/webpack-contrib/config-loader/blob/master/docs/EXTENDS.md)
 
 ## Commands
 
