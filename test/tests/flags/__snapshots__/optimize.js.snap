@@ -23,7 +23,7 @@ Object {
 `;
 
 exports[`Flags > --optimize-* > max-chunks should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  <size>    main  [emitted]  main
 Entrypoint main = main.js
@@ -52,7 +52,7 @@ Object {
 `;
 
 exports[`Flags > --optimize-* > min-chunk-size should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  <size>    main  [emitted]  main
 Entrypoint main = main.js
@@ -81,7 +81,7 @@ Object {
 `;
 
 exports[`Flags > --optimize-* > minimize should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  <size>    main  [emitted]  main
 Entrypoint main = main.js

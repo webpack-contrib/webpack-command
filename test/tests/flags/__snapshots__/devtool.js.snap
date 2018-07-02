@@ -15,7 +15,7 @@ Object {
 `;
 
 exports[`Flags > --devtool > should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
       Asset      Size  Chunks             Chunk Names
     main.js  3.88 KiB    main  [emitted]  main
 main.js.map  3.59 KiB    main  [emitted]  main

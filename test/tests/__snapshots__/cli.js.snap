@@ -21,7 +21,7 @@ exports[`Commands > should add directories to entries #0 1`] = `
 "ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
-webpack v4.12.1
+webpack v4.14.0
 
 9a596dacea06b65d858a
   size   name  module                                     status
@@ -168,7 +168,7 @@ exports[`Zero Config > should run #0 1`] = `
 "ℹ ｢webpack｣: Starting Build
 ℹ ｢webpack｣: Build Finished
 
-webpack v4.12.1
+webpack v4.14.0
 
 9a596dacea06b65d858a
   size   name  module          status

@@ -19,7 +19,7 @@ Object {
 `;
 
 exports[`Flags > --entry > multi should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  4.95 KiB    main  [emitted]  main
 Entrypoint main = main.js

@@ -19,7 +19,7 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-alias reporter should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  4.61 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -48,7 +48,7 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-extensions reporter should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  4.64 KiB    main  [emitted]  main
 Entrypoint main = main.js
@@ -73,7 +73,7 @@ Object {
 `;
 
 exports[`Flags > --resolve-* > resolve-loader-alias reporter should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  17.9 KiB    main  [emitted]  main
 Entrypoint main = main.js

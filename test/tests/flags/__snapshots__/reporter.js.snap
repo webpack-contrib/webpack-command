@@ -19,7 +19,7 @@ Object {
 `;
 
 exports[`Flags > --reporter > basic reporter should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  <size>    main  [emitted]  main
 Entrypoint main = main.js
@@ -62,7 +62,7 @@ Array [
 `;
 
 exports[`Flags > --reporter > basic-multi reporter should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
 Child
       Asset      Size  Chunks             Chunk Names
     main.js  <size>    main  [emitted]  main

@@ -20,7 +20,7 @@ Object {
 `;
 
 exports[`Flags > --hot > should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  28.9 KiB    main  [emitted]  main
 Entrypoint main = main.js

@@ -17,7 +17,7 @@ Object {
 `;
 
 exports[`Flags > --prefetch > should build #0 1`] = `
-"Version: webpack 4.12.1
+"Version: webpack 4.14.0
   Asset      Size  Chunks             Chunk Names
 main.js  4.56 KiB    main  [emitted]  main
 Entrypoint main = main.js
