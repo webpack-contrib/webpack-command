@@ -392,6 +392,66 @@ Object {
 }
 `;
 
+exports[`lib/flags/util > should fail to load a plugin with bad options #0 1`] = `
+"UglifyJs Plugin Invalid Options
+
+options['true'] is an invalid additional property
+"
+`;
+
+exports[`lib/flags/util > should fail to load a plugin with bad querystring #0 1`] = `
+"UglifyJs Plugin Invalid Options
+
+options['...'] is an invalid additional property
+"
+`;
+
+exports[`lib/flags/util > should load a plugin #0 1`] = `
+UglifyJsPlugin {
+  "options": Object {
+    "cache": false,
+    "exclude": undefined,
+    "extractComments": false,
+    "include": undefined,
+    "parallel": false,
+    "sourceMap": false,
+    "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+    "uglifyOptions": Object {
+      "compress": Object {
+        "inline": 1,
+      },
+      "output": Object {
+        "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
+      },
+    },
+    "warningsFilter": [Function],
+  },
+}
+`;
+
+exports[`lib/flags/util > should load a plugin with querystring #0 1`] = `
+UglifyJsPlugin {
+  "options": Object {
+    "cache": true,
+    "exclude": undefined,
+    "extractComments": false,
+    "include": undefined,
+    "parallel": false,
+    "sourceMap": false,
+    "test": /\\\\\\.js\\(\\\\\\?\\.\\*\\)\\?\\$/i,
+    "uglifyOptions": Object {
+      "compress": Object {
+        "inline": 1,
+      },
+      "output": Object {
+        "comments": /\\^\\\\\\*\\*!\\|@preserve\\|@license\\|@cc_on/,
+      },
+    },
+    "warningsFilter": [Function],
+  },
+}
+`;
+
 exports[`lib/flags/util > should not allow invalid value types #0 1`] = `
 [Error: Flags were specified with invalid values:
 

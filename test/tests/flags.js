@@ -1,6 +1,6 @@
 const { test } = require('../util');
 const flags = require('../../lib/flags');
-const { validateFlags } = require('../../lib/flags/util');
+const { loadPlugin, validateFlags } = require('../../lib/flags/util');
 
 const config = require('../fixtures/common/webpack.config.js');
 
@@ -57,5 +57,23 @@ test('lib/flags/util', module, () => {
     } catch (e) {
       expect(e).toMatchSnapshot();
     }
+  });
+
+  it('should load a plugin', () => {
+    expect(loadPlugin('uglifyjs-webpack-plugin')).toMatchSnapshot();
+  });
+
+  it('should load a plugin with querystring', () => {
+    expect(loadPlugin('uglifyjs-webpack-plugin?cache=true')).toMatchSnapshot();
+  });
+
+  it('should fail to load a plugin with bad querystring', () => {
+    const fn = () => loadPlugin('uglifyjs-webpack-plugin?...');
+    expect(fn).toThrowErrorMatchingSnapshot();
+  });
+
+  it('should fail to load a plugin with bad options', () => {
+    const fn = () => loadPlugin('uglifyjs-webpack-plugin?true');
+    expect(fn).toThrowErrorMatchingSnapshot();
   });
 });

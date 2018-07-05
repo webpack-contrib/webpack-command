@@ -43,6 +43,7 @@ const flags = [
   'plugin',
   'prefetch',
   'profile',
+  'progress',
   'provide',
   'records',
   'reporter',

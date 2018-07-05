@@ -349,3 +349,15 @@ Array [
   "prefetch",
 ]
 `;
+
+exports[`reporters + bail > Basic: render should return error when bail set #0 1`] = `[Error: test]`;
+
+exports[`reporters + bail > Basic: should return error when bail set #0 1`] = `[Error: test]`;
+
+exports[`reporters + bail > Json: render should return error when bail set #0 1`] = `[Error: test]`;
+
+exports[`reporters + bail > Json: should return error when bail set #0 1`] = `[Error: test]`;
+
+exports[`reporters + bail > Stylish: render should return error when bail set #0 1`] = `[Error: test]`;
+
+exports[`reporters + bail > Stylish: should return error when bail set #0 1`] = `[Error: test]`;
