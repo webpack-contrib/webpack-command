@@ -119,6 +119,19 @@ test('JsonReporter', module, () => {
   }
 });
 
+test('reporters + bail', module, () => {
+  for (const name of ['Basic', 'Json', 'Stylish']) {
+    it(`${name}: render should return error when bail set`, () => {
+      const reporterPath = `../../lib/reporters/${name}Reporter`;
+      // eslint-disable-next-line global-require, import/no-dynamic-require
+      const ReporterClass = require(reporterPath);
+      const reporter = new ReporterClass({});
+      const error = new Error('test');
+      expect(reporter.render(error, null)).toMatchSnapshot();
+    });
+  }
+});
+
 test('bad reporter name', module, () => {
   const fixture = `json/json`;
   const fixtureType = 'reporters';
