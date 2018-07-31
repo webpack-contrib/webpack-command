@@ -18,6 +18,16 @@ test('Bad Config', module, () => {
   });
 });
 
+test('Function Entry Config', module, () => {
+  it('should be used', () => {
+    const cliPath = resolve(__dirname, '../../lib/cli');
+    const cwd = resolve(__dirname, '../fixtures/function-entry-config');
+
+    // This will report `Can't resolve './src'` if the entry function is lost.
+    expect(() => execa.sync('node', [cliPath], { cwd })).not.toThrow();
+  });
+});
+
 test('Zero Config', module, () => {
   it('should run', () => {
     const cliPath = resolve(__dirname, '../../lib/cli');
