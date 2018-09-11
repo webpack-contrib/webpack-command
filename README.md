@@ -14,6 +14,19 @@
 
 # webpack-command
 
+DEPRECATED. Please use `webpack-cli`. If any features were not implemented in `webpack-cli` feel free to create issue. 
+
+Why deprecated `webpack-command` ?
+- `webpack-cli` is very stable and have more features.
+- Two CLIs are misleading for developers.
+- Hard to maintain two package with same purpose.
+- The author stopped developing the package.
+- Most of the features are already implemented in `webpack-cli`.
+
+Thanks for using `webpack`! We apologize for the inconvenience. In the future, we will avoid such situations.
+
+_____
+
 A superior CLI experience for webpack. Lightweight, modular, and opinionated.
 
 For users coming from `webpack-cli`, please read about
